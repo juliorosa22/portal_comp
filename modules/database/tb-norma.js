@@ -1,0 +1,13 @@
+
+
+var norma = [
+ {data: '20191101', titulo: ['Normas Internas para Controle de Frequência de Alunos do IME (NICFA/IME) - versão 2019', 'Rules for Student Attendance Control at IME (NICFA/IME) 2019 version'], descricao: ['Regula os critérios, as responsabilidades e os procedimentos relativos ao controle de frequência de alunos, fixando o processo e critérios para justificação de faltas e dispensa dos alunos aos trabalhos escolares.', 'Regulation for student frequency at IME, establishing the processes and criteria for absence justification and student dismiss.'], arquivo: 'NICFA_2019.pdf'},
+ {data: '20180827', titulo: ['Normas Internas do Programa de Pós-graduação Stricto Sensu em Sistemas e Computação do IME - NIPPGSC/IME', 'Rules for Stricto Sensu Graduation Courses in Systems and Computation at IME (NIPPGSC/IME)'], descricao: ['Regula as peculiaridades do Programa de Pós-graduação em Sistemas e Computação.', 'Regulates the peculiarities in the Stricto Sensu Graduation Courses in Systems and Computation at IME.'], arquivo: 'aditamento_nippgsc2018.pdf'},
+ {data: '20171020', titulo: ['Diretrizes para Estágio de Pós-doutorado', 'Post-doctoral Internship Directives'], descricao: ['Regula o Estágio de Pós-doutorado no Instituto Militar de Engenharia.', 'Regulates the Post-doctoral Internship at IME.'], arquivo: 'bi-195-0ut-2017.pdf'},
+ {data: '20161107', titulo: ['Normas Internas dos Cursos de Pós-graduação Stricto Sensu do IME (NICPG/IME) - versão 2016', 'Rules for Stricto Sensu Graduation Courses at IME (NICPG/IME)'], descricao: ['Estabelece procedimentos relativos às atividades de ensino de Pós-Graduação stricto sensu para militares e civis no Instituto Militar de Engenharia, e de acompanhamento de oficiais pós-graduandos do Sistema de Ciência e Tecnologia do Exército em Instituições de Ensino Superior, no Brasil e no exterior.', 'Establishes the rules for the activities of military and civilian graduate students at IME.'], arquivo: 'nicpg-ime.pdf'},
+ {data: '20100414', titulo: ['Portaria CAPES N 76, de 14/04/10', 'CAPES Decree N 76, 04/14/2010'], descricao: ['Novo Regulamento - Demanda Social', 'Current Regulation for CAPES Grants'], arquivo: 'capes-ds.pdf'},
+ {data: '20061121', titulo: ['Normas de Monitoria em Disciplina para Alunos de Pós-graduação do Instituto Militar de Engenharia', 'Rules for Military Class monitor activities'], descricao: ['Estabelece critérios básicos e orientações para monitoria em disciplina nos cursos de graduação e pós-graduação, para os alunos de pós-graduação do Instituto Militar de Engenharia.', 'Establishes the rules for a military student to act as a monitor in undergraduate classes.'], arquivo: 'Adt158_IME.pdf'}
+];
+
+
+

@@ -1,0 +1,43 @@
+
+/* - ++resource++pas.plugins.loginunico/loginunico.css - */
+@media all {
+/* https://www.gov.br/saude/portal_css/++resource++pas.plugins.loginunico/loginunico.css?original=1 */
+div.loginunico {
+min-width: 175px;
+min-height: 28px;
+width: 76%;
+margin-bottom: 5%;
+}
+div.loginunico a.btn {
+-webkit-border-top-left-radius: 0.5em;
+-webkit-border-bottom-left-radius: 0.5em;
+-webkit-border-top-right-radius: 0.5em;
+-webkit-border-bottom-right-radius: 0.5em;
+border-color: #446aa6;
+border-style: solid;
+border-width: thin;
+text-align: center;
+font-size: 110%;
+color: #446aa6;
+text-decoration: none;
+padding: 0.5em 0.5em;
+display: inline-block;
+}
+div.loginunico span.bold {
+font-weight: bold;
+}
+div.loginunico a.btn:hover {
+background: #2670e8;
+color: #fff;
+}
+html body.template-logged_out {
+background-image: none;
+}
+body.template-logged_out #content h1.documentFirstHeading {
+padding-left: 0%;
+}
+body.template-logged_out div#content {
+text-align: left;
+}
+}
+

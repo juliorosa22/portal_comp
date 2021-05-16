@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_home</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_notc</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_faqs</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_prcd</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_fale</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_sens</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_selc</loc>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_rslt</loc>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_isol</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_hist</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_cord</loc>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lpes</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_obri</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_prof</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_disc</loc>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_egre</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_oqts</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_cldr</loc>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_nleg</loc>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_repd</loc>
+      <changefreq>yearly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_docp</loc>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2020</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2019</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2018</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2017</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2016</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2015</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2014</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2013</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2012</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.comp.ime.eb.br/pos/?pc=p_lstd&amp;ano=2011</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+</urlset>

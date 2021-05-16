@@ -1,0 +1,47 @@
+
+/* - jquery.autocomplete.css - */
+@media screen {
+/* https://www.gov.br/saude/portal_css/jquery.autocomplete.css?original=1 */
+/* */
+/* */
+.ac_results {
+padding: 0;
+margin: 0;
+border: 1px solid #9C6E3D;
+background-color: White;
+overflow: hidden;
+z-index: 99999;
+}
+.ac_results ul {
+width: 100%;
+list-style-position: outside;
+list-style: none;
+padding: 0;
+margin: 0;
+}
+.ac_results li {
+margin: 0px;
+padding: 2px 5px;
+cursor: default;
+display: block;
+font: menu;
+font-size: 12px;
+line-height: 16px;
+overflow: hidden;
+}
+.ac_loading {
+background: white url('indicator.gif') right center no-repeat;
+}
+.ac_odd {
+background-color: transparent;
+}
+.ac_even {
+background-color: #eef3f5;
+}
+.ac_over {
+background-color: #9C6E3D;
+color: white;
+}
+/* */
+}
+
