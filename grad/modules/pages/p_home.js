@@ -9,10 +9,14 @@ useDataResource('tb-noticia.js');
 
 //texts in page
 var phome_txt_br = {
-  'head': "Programa de Pós-graduação em Sistemas e Computação / IME",
-  'par-01': "O Programa de Pós-Graduação em Sistemas e Computação (PGSC) do IME tem como objetivo preparar profissionais qualificados, com base científica e tecnológica, capazes de conduzir projetos de pesquisa e desenvolvimento de novas tecnologias em Engenharia de Computação, bem como contribuir para a melhoria e aperfeiçoamento do ensino, pesquisa, desenvolvimento e inovação na área de Engenharia de Computação para atender às demandas da sociedade e também à expansão do ensino superior em Engenharia da Computação no Brasil.",
-  'par-02': "O Programa insere-se em uma matriz educacional que articula três vertentes: (a) Formação de qualidade; (b) Integração entre pós-graduação, graduação e contínua capacitação de professores, e; (c) Conexão com as demandas de pesquisa, desenvolvimento e inovação do Exército Brasileiro, em sintonia com as demandas da sociedade.",
-  'par-03': "O Programa oferece o curso de Mestrado em Sistemas e Computação, reconhecido pela CAPES de acordo com o Parecer de 2017, do Conselho Nacional de Educação. Na avaliação quadrienal do período 2013-2016, o Programa obteve o conceito 3."
+  'head': "Engenharia de Computação - Graduação / IME",
+  'par-01': "A Seção de Ensino (Departamento Acadêmico) Engenharia de Computação no IME tem como objetivo produzir conhecimento e formar recursos humanos nos níveis de graduação e pós-graduação. A qualidade dos alunos formados é comprovada, entre outros qualificadores, por meio de suas colocações no mercado de trabalho. Os egressos do IME ocupam posição de destaque em indústrias, universidades e institutos de pesquisa.",
+  'par-02': "O curso (ver histórico) foi o primeiro criado no Brasil, em 1985, e tem por objetivo formar engenheiros capacitados para a integração matemática-hardware-software, segundo moderna visão sistêmica. Concorrendo na área Engenharia de Computação, os alunos obtiveram o primeiro lugar em desempenho na prova do ENADE dos anos de 2014, 2017 e 2018. Destacando-se entre os primeiros em desempenho geral no ENADE, o curso de Engenharia de Computação do IME contribui para o desenvolvimento nacional com o sucesso da participação dos seus egressos nas empresas e indústrias e, sobretudo, atende as necessidades de engenharia do Exército Brasileiro.",
+  'par-03': "A integração com a pós-graduação em Sistemas e Computação também é um diferencial importante.",
+  'par-04': "Todos os docentes do núcleo permanente do Programa de Mestrado ministram aulas no Curso de Graduação em Engenharia de Computação, integrantes da mesma Seção de Ensino (Departamento Acadêmico) do IME. Além disso, o corpo docente mantém uma intensiva orientação acadêmica de alunos da graduação em temas de Projeto de Fim de Curso (PFC).",
+  'par-05': "Os mais relevantes trabalhos da graduação são beneficiados pela publicação e divulgação, à semelhança do mestrado, com o Código Brasileiro do ISSN, obtido do Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT).",
+  'par-06': "Os projetos representativos da integração da graduação com o mestrado resultam em participações, publicações e premiações em eventos, dos quais destacam-se, entre outros:",
+  'par-07':"O curso de Engenharia de Computação do IME destaca-se pelo seu pioneirismo e pela sua excelência, sendo um dos principais centros de referência no Brasil do ensino de graduação nesta engenharia."
 }
 
 var phome_txt_en = {
@@ -169,7 +173,7 @@ PHOME.prototype = {
     conteudo: function() {
         // calculations...
 
-        var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.langTxt['par-01'] + '</p><p>' + this.langTxt['par-02'] + '</p><p>' + this.langTxt['par-03'] + '</p></div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div>';
+        var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.langTxt['par-01'] + '</p><p>' + this.langTxt['par-02'] + '</p><p>' + this.langTxt['par-03'] + '</p><p>' + this.langTxt['par-04'] + '</p><p>' +  '</p><p>' + this.langTxt['par-05'] + '</p><p>' + '</p><p>' + this.langTxt['par-06'] + '</p><p>'+ '</p><p>' + this.langTxt['par-07']  +'</p></div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div>';
 
         if (getLang() == 0) dContent += this.recNoticias(); else dContent += '<div id="viewlet-above-content-body"></div><br />';
         dContent += this.recAtuacao();

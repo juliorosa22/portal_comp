@@ -7,14 +7,14 @@ useDataResource('tb-interesse-professor.js');
 
 //texts in page
 var pprof_txt_br = {
-  'head': "Corpo Docente do PGSC",
+  'head': "Corpo Docente da Graduação",
   'label': "Docentes",
   'par-01': "Docentes Permanentes",
   'par-02': "Docentes Colaboradores"
 }
 
 var pprof_txt_en = {
-  'head': "PGSC Faculty",
+  'head': "Computer Enginnering Faculty",
   'label': "Faculty",
   'par-01': "Full Member",
   'par-02': "Collaborator/Term Member"
