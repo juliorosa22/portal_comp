@@ -15,32 +15,32 @@ var menu_site = [
     { label: "menu01-04", pc: "p_prof"},
     { label: "menu01-05", pc: "p_disc"},
     { label: "menu01-06", pc: "p_egre"}] },
-  { label: "menu02", submenus: [
-    { label: "menu02-01", pc: "p_notc"},
-    { label: "menu02-02", pc: "p_oqts"},
-    { label: "menu02-03", pc: "p_cldr"},
-    { label: "menu02-04", pc: "p_nleg"},
-    { label: "menu02-05", pc: "p_repd"}] },
   { label: "menu03", submenus: [
-    { label: "menu03-1", pc: "p_prcd&id_p=1"},
-    { label: "menu03-2", pc: "p_prcd&id_p=2"},
-    { label: "menu03-3", pc: "p_prcd&id_p=3"},
-    { label: "menu03-4", pc: "p_prcd&id_p=4"},
-    { label: "menu03-5", pc: "p_prcd&id_p=5"},
-    { label: "menu03-6", pc: "p_prcd&id_p=6"},
-    { label: "menu03-7", pc: "p_prcd&id_p=7"},
-    { label: "menu03-8", pc: "p_prcd&id_p=8"},
-    { label: "menu03-9", pc: "p_prcd&id_p=9"},
-    { label: "menu03-10", pc: "p_prcd&id_p=10"},
-    { label: "menu03-11", pc: "p_prcd&id_p=11"},
-    { label: "menu03-12", pc: "p_prcd&id_p=12"},
-    { label: "menu03-13", pc: "p_prcd&id_p=13"},
-    { label: "menu03-14", pc: "p_prcd&id_p=14"},
-    { label: "menu03-15", pc: "p_prcd&id_p=15"}] },
+    { label: "menu03-01", pc: "p_notc"},
+    { label: "menu03-02", pc: "p_oqts"},
+    { label: "menu03-03", pc: "p_cldr"},
+    { label: "menu03-04", pc: "p_nleg"},
+    { label: "menu03-05", pc: "p_repd"}] },
   { label: "menu04", submenus: [
-    { label: "menu04-01", pc: "p_faqs"},
-    { label: "menu04-02", pc: "p_isol"},
-    { label: "menu04-03", pc: "p_fale"}] }
+    { label: "menu04-1", pc: "p_prcd&id_p=1"},
+    { label: "menu04-2", pc: "p_prcd&id_p=2"},
+    { label: "menu04-3", pc: "p_prcd&id_p=3"},
+    { label: "menu04-4", pc: "p_prcd&id_p=4"},
+    { label: "menu04-5", pc: "p_prcd&id_p=5"},
+    { label: "menu04-6", pc: "p_prcd&id_p=6"},
+    { label: "menu04-7", pc: "p_prcd&id_p=7"},
+    { label: "menu04-8", pc: "p_prcd&id_p=8"},
+    { label: "menu04-9", pc: "p_prcd&id_p=9"},
+    { label: "menu04-10", pc: "p_prcd&id_p=10"},
+    { label: "menu04-11", pc: "p_prcd&id_p=11"},
+    { label: "menu04-12", pc: "p_prcd&id_p=12"},
+    { label: "menu04-13", pc: "p_prcd&id_p=13"},
+    { label: "menu04-14", pc: "p_prcd&id_p=14"},
+    { label: "menu04-15", pc: "p_prcd&id_p=15"}] },
+  { label: "menu05", submenus: [
+    { label: "menu05-01", pc: "p_faqs"},
+    { label: "menu05-02", pc: "p_isol"},
+    { label: "menu05-03", pc: "p_fale"}] }
 ];
 
 var menu_site_capes = [
@@ -81,7 +81,7 @@ Contexto.prototype = {
     },
 
     siteName: function() {
-      return '<a href="" title="PGSC">' + getLabel('site-name') + '</a>';
+      return '<a href="" title="Graduação">' + getLabel('site-name') + '</a>';
     },
 
     montaMenu: function() {
