@@ -1,6 +1,6 @@
 ﻿
 var pt_br = {
-  'site-name': " (Copia do Site Projeto Integrador CFrm)Programa de Pós-graduação em Sistemas e Computação (IME - PGSC)",
+  'site-name': " (Copia do Site Projeto Integrador CFrm) Graduação em Engenharia de Computação - IME",
 //
   'menugovbr01': "Órgãos do Governo",
   'menugovbr02': "Acesso à Informação",
@@ -8,9 +8,13 @@ var pt_br = {
   'menugovbr04': "Acessibilidade",
   'menugovbr05': "en-us",
 //
-  'menu01': "Seleção ao PGSC",
-  'menu01-01': "Seleção de Candidatos",
-  'menu01-02': "Resultado da Seleção",
+  'menu01': "Sobre a Graduação",
+  'menu01-01': "Histórico",
+  'menu01-02': "Contatos",
+  'menu01-03': "Disciplinas",
+  'menu01-04': "Corpo Docente",
+  'menu01-05': "Discentes",
+  'menu01-06': "Egressos",
 //
   'menu02': "Sobre o PGSC",
   'menu02-01': "História e Missão",
@@ -25,7 +29,7 @@ var pt_br = {
   'menu03-02': "QTS",
   'menu03-03': "Calendário Escolar",
   'menu03-04': "Normas e Legislações",
-  'menu03-05': "Repositório de Dissertações",
+  'menu03-05': "PFC",
   'menu03-05-a': "Dissertações para o ano de ",
 //
   'menu04': "Procedimentos Acadêmicos",
