@@ -169,7 +169,7 @@ Contexto.prototype = {
     },
 
     geraPagina: function() {
-      document.title = 'PGSC :: ' + this.pagina.label();
+      document.title = 'Graduação :: ' + this.pagina.label();
       document.getElementById("govbr-header").innerHTML = this.headerGovBr();
       document.getElementById("site-name").innerHTML = this.siteName();
       document.getElementById("main-menu").innerHTML = this.montaMenu() + this.montaMenuGovBr();
