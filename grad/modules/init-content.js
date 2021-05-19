@@ -9,43 +9,30 @@ var menu_gov_br = [
 
 var menu_site = [
   { label: "menu01", submenus: [
-    { label: "menu01-01", pc: "p_hist"},
-    { label: "menu01-02", pc: "p_cont"},
-    { label: "menu01-03", pc: "p_ldisci"},
-    { label: "menu01-04", pc: "p_prof"},
-    { label: "menu01-05", pc: "p_disc"},
-    { label: "menu01-06", pc: "p_egre"}] },
-  { label: "menu03", submenus: [
-    { label: "menu03-01", pc: "p_notc"},
-    { label: "menu03-02", pc: "p_oqts"},
-    { label: "menu03-03", pc: "p_cldr"},
-    { label: "menu03-04", pc: "p_nleg"},
-    { label: "menu03-05", pc: "p_repd"}] },
-  { label: "menu04", submenus: [
-    { label: "menu04-1", pc: "p_prcd&id_p=1"},
-    { label: "menu04-2", pc: "p_prcd&id_p=2"},
-    { label: "menu04-3", pc: "p_prcd&id_p=3"},
-    { label: "menu04-4", pc: "p_prcd&id_p=4"},
-    { label: "menu04-5", pc: "p_prcd&id_p=5"},
-    { label: "menu04-6", pc: "p_prcd&id_p=6"},
-    { label: "menu04-7", pc: "p_prcd&id_p=7"},
-    { label: "menu04-8", pc: "p_prcd&id_p=8"},
-    { label: "menu04-9", pc: "p_prcd&id_p=9"},
-    { label: "menu04-10", pc: "p_prcd&id_p=10"},
-    { label: "menu04-11", pc: "p_prcd&id_p=11"},
-    { label: "menu04-12", pc: "p_prcd&id_p=12"},
-    { label: "menu04-13", pc: "p_prcd&id_p=13"},
-    { label: "menu04-14", pc: "p_prcd&id_p=14"},
-    { label: "menu04-15", pc: "p_prcd&id_p=15"}] },
-  { label: "menu05", submenus: [
-    { label: "menu05-01", pc: "p_faqs"},
-    { label: "menu05-02", pc: "p_isol"},
-    { label: "menu05-03", pc: "p_fale"}] }
+    { label: "menu01-01", pc: "p_homegrad"},
+    { label: "menu01-02", pc: "p_histgrad"},
+    { label: "menu01-03", pc: "p_profgrad"},
+    { label: "menu01-04", pc: "p_alunos"},
+    { label: "menu01-05", pc: "p_disciplinas"}]
+   },
+  { label: "menu02", submenus: [
+    { label: "menu02-01", pc: "p_pfc"}]
+  },
+  {
+    label:"menu04",submenus:[
+      { label: "menu04-01", pc: "p_fale"}
+    ]
+  }
+];
+
+var menu_projetos_ref =[
+  { label: "menu03-01",site:"http://www.dct.eb.mil.br/"},
+  { label: "menu03-02",site:"http://www.dct.eb.mil.br/"}
 ];
 
 var menu_site_capes = [
-  { label: "menu06-01", site: "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/avaliacao/sobre-a-avaliacao/areas-avaliacao/sobre-as-areas-de-avaliacao/colegio-de-ciencias-exatas-tecnologicas-e-multidisciplinar/ciencias-exatas-e-da-terra/ciencia-da-computacao"},
-  { label: "menu06-02", site: "https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf"}
+  { label: "menu05-01", site: "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/avaliacao/sobre-a-avaliacao/areas-avaliacao/sobre-as-areas-de-avaliacao/colegio-de-ciencias-exatas-tecnologicas-e-multidisciplinar/ciencias-exatas-e-da-terra/ciencia-da-computacao"},
+  { label: "menu05-02", site: "https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/veiculoPublicacaoQualis/listaConsultaGeralPeriodicos.jsf"}
 ];
 
 var menu_site_gov_br = [
@@ -95,7 +82,13 @@ Contexto.prototype = {
         retorno += '</ul></li>';
       }
 
-      retorno += '<li class="dropdown-submenu"><a class="plain">' + getLabel("menu06") + '</a><ul class="submenu">';
+      retorno += '<li class="dropdown-submenu"><a class="plain">' + getLabel("menu03") + '</a><ul class="submenu">';
+      for (anItem of menu_projetos_ref) {
+        retorno += '<li class="plain"><a href="' + anItem.site + '" target="_blank" class="state-published">' + getLabel(anItem.label) + '</a></li>';
+      }
+      retorno += '</ul></li>';
+
+      retorno += '<li class="dropdown-submenu"><a class="plain">' + getLabel("menu05") + '</a><ul class="submenu">';
       for (anItem of menu_site_capes) {
         retorno += '<li class="plain"><a href="' + anItem.site + '" target="_blank" class="state-published">' + getLabel(anItem.label) + '</a></li>';
       }
