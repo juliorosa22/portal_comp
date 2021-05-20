@@ -37,7 +37,7 @@ function getCookie(cname) {
 
 function getParameterByName(name, url) {
   console.log('inside getParameterByName');
-  console.log(name)
+  console.log(name);
   if (!url) url = window.location.href;
   console.log(url);
   console.log(name);
