@@ -26,12 +26,12 @@ var phome_txt_en = {
   'par-07':"The Computer Engineering course at IME stands out for its pioneering spirit and excellence, being one of the main reference centers in Brazil for undergraduate teaching in this engineering."
 }
 
-var PHOME_GRAD = function() {
+var PHOMEGRAD = function() {
     this.langTxt = ( getLang() == 0 ) ? phome_txt_br : phome_txt_en;
     this.contentTitle = this.langTxt['head'];
 }
 
-PHOME_GRAD.prototype = {
+PHOMEGRAD.prototype = {
     label: function() {
         return "Home";
     },
