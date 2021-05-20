@@ -1,11 +1,11 @@
 
 //data file
 useDataResource('tb-areaconcentracao.js');
-useDataResource('tb-disciplinas.js');
+useDataResource('tb-disciplina-grad.js');
 
 
 //texts in page
-var plpes_txt_br = {
+var pdisciplinas_txt_br = {
   'head': "Disciplinas da Graduação",
   'label': "Disciplinas",
   'par-01': "As disciplinas estão organizadas de acordo com ano na qual é ofertada e período.",
@@ -13,7 +13,7 @@ var plpes_txt_br = {
   
 }
 
-var plpes_txt_en = {
+var pdisciplinas_txt_en = {
   'head': "Rearch and Structure",
   'label': "Research",
   'par-01': "The Graduate Program in Systems and Computing has",
@@ -21,12 +21,12 @@ var plpes_txt_en = {
 }
 
 
-var PLPES = function() {
+var PDISCIPLINAS = function() {
   this.langTxt = ( getLang() == 0 ) ? plpes_txt_br : plpes_txt_en;
   this.contentTitle = this.langTxt['head'];
 };
 
-PLPES.prototype = {
+PDISCIPLINAS.prototype = {
   label: function() {
       return this.langTxt['label'];
   },
@@ -59,7 +59,7 @@ PLPES.prototype = {
   recLinhas: function() {
       var retorno = '';
 
-      var result = alasql('SELECT * FROM ? WHERE ano=3 ORDER BY periodo',[disciplinas]);
+      var result = alasql('SELECT * FROM ? WHERE ano=3 ORDER BY periodo',[disciplinas_grad]);
       let it = result[Symbol.iterator]();
       var anItem = it.next();
 

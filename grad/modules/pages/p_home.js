@@ -1,19 +1,11 @@
 
 //data file
 
-
-
-//data file
-useDataResource('tb-graduacao.js');
-useDataResource('tb-professor.js');
-useDataResource('tb-aluno.js');
-useDataResource('tb-linhapesquisa.js');
-useDataResource('tb-aauxdefesa.js');
 useDataResource('tb-noticia.js');
 
 //texts in page
 var phome_txt_br = {
-  'head': "Engenharia de Computação - Graduação / IME",
+  'head': "Engenharia de Computação - Graduação (IME)",
   'par-01': "A Seção de Ensino (Departamento Acadêmico) Engenharia de Computação no IME tem como objetivo produzir conhecimento e formar recursos humanos nos níveis de graduação e pós-graduação. A qualidade dos alunos formados é comprovada, entre outros qualificadores, por meio de suas colocações no mercado de trabalho. Os egressos do IME ocupam posição de destaque em indústrias, universidades e institutos de pesquisa.",
   'par-02': "O curso (ver histórico) foi o primeiro criado no Brasil, em 1985, e tem por objetivo formar engenheiros capacitados para a integração matemática-hardware-software, segundo moderna visão sistêmica. Concorrendo na área Engenharia de Computação, os alunos obtiveram o primeiro lugar em desempenho na prova do ENADE dos anos de 2014, 2017 e 2018. Destacando-se entre os primeiros em desempenho geral no ENADE, o curso de Engenharia de Computação do IME contribui para o desenvolvimento nacional com o sucesso da participação dos seus egressos nas empresas e indústrias e, sobretudo, atende as necessidades de engenharia do Exército Brasileiro.",
   'par-03': "A integração com a pós-graduação em Sistemas e Computação também é um diferencial importante.",
@@ -24,10 +16,14 @@ var phome_txt_br = {
 }
 
 var phome_txt_en = {
-  'head': "Graduate Program in Systems and Computing / IME",
-  'par-01': "Welcome to the Graduate Program in Systems and Computing of the Military Institute of Engineering (IME).",
+  'head': "Graduate Program in Systems and Computing (IME)",
+  'par-01': "The course (see history) was the first created in Brazil, in 1985, and aims to train engineers trained in mathematical-hardware-software integration, according to a modern systemic view. Competing in the Computer Engineering area, students obtained the first place in performance in the ENADE test of the years 2014, 2017 and 2018. Standing out among the first in general performance at ENADE, the Computer Engineering course at IME contributes to national development with the successful participation of its graduates in companies and industries and, above all, meets the engineering needs of the Brazilian Army.",
   'par-02': "The Military Institute of Engineering is the Brazilian Army engineering Institute. It descends from the Royal Academy of Artillery, Fortification and Design, created in 1972, considered to be the first Engineering School of the Americas and the third of the world. IME is small but prizes excellence, imparting knowledge in engineering through comprehensive undergraduate and graduage programs, research, dissemination through scholarly publications, and service to the community, the Army, and the nation.",
-  'par-03': "The mission of the Systems and Computing Program is to expand knowledge and benefit society through research integrated with education. We investigate the most challenging, fundamental problems in science and technology in an interdisciplinary atmosphere, while educating students to become creative members of society. The Program admits both civilian and military applicants."
+  'par-03': "The integration with the postgraduate course in Systems and Computing is also an important differential.",
+  'par-04':"All professors of the permanent core of the Master's Program teach classes in the Undergraduate Course in Computer Engineering, members of the same Teaching Section (Academic Department) of IME. In addition, the faculty maintains intensive academic guidance from undergraduate students on End of Course Project (PFC) themes.",
+  'par-05':"The most relevant undergraduate works are benefited by publication and dissemination, similar to the master's degree, with the Brazilian ISSN Code, obtained from the Brazilian Institute of Information in Science and Technology (IBICT).",
+  'par-06':"Representative projects for the integration of undergraduate and master's degrees result in participations, publications and awards at events, of which the following stand out, among others:",
+  'par-07':"The Computer Engineering course at IME stands out for its pioneering spirit and excellence, being one of the main reference centers in Brazil for undergraduate teaching in this engineering."
 }
 
 var PHOME = function() {
@@ -73,13 +69,13 @@ PHOME.prototype = {
     },
 
     recAtuacao: function() {
-        var retorno = '<div><div class="outstanding-header tile-content" style="text-align: center;"><h2 class="outstanding-title">' + getLabel('conh_programa') + '</h2><br /></div><div class="govbr-cards centralizar-cars"><div class="wrapper">';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu01-01") + '"><span class="front"><span class="titulo">' + getLabel("menu01-01") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu05-01") + '"><span class="front"><span class="titulo">' + getLabel("menu05-01") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu02-03") + '"><span class="front"><span class="titulo">' + getLabel("menu02-03") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu03-02") + '"><span class="front"><span class="titulo">' + getLabel("menu03-02") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu03-05") + '"><span class="front"><span class="titulo">' + getLabel("menu03-05") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu05-03") + '"><span class="front"><span class="titulo">' + getLabel("menu05-03") + '</span></span></a></div>';
+        var retorno = '<div><div class="outstanding-header tile-content" style="text-align: center;"><h2 class="outstanding-title">' + getLabel('conh_grad') + '</h2><br /></div><div class="govbr-cards centralizar-cars"><div class="wrapper">';
+        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu01-02") + '"><span class="front"><span class="titulo">' + getLabel("menu01-02") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu01-03") + '"><span class="front"><span class="titulo">' + getLabel("menu05-01") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu01-05") + '"><span class="front"><span class="titulo">' + getLabel("menu01-05") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu02-01") + '"><span class="front"><span class="titulo">' + getLabel("menu02-01") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu03-01") + '"><span class="front"><span class="titulo">' + getLabel("menu03-01") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu04-01") + '"><span class="front"><span class="titulo">' + getLabel("menu04-01") + '</span></span></a></div>';
         retorno += '</div></div></div>';
         return retorno;
     },
@@ -93,87 +89,6 @@ PHOME.prototype = {
         return str.substring(0, 2) + ':' + str.substring(2);
     },
 
-    recAluno: function(id) {
-        var result = alasql('SELECT nome FROM ? WHERE matricula='+id,[aluno]);
-        let it = result[Symbol.iterator]();
-        var anItem = it.next();
-
-        return anItem.value.nome;
-    },
-
-    recGraduacao: function(grad) {
-        if (grad == 12) return '';
-        else {
-          var result = alasql("SELECT descricao FROM ? WHERE codigo="+grad,[graduacao]);
-          let it = result[Symbol.iterator]();
-          var anItem = it.next();
-
-          return anItem.value.descricao[getLang()];
-        }
-    },
-
-    recOrientadores: function(lista) {
-        var retorno = '';
-        var qtdOrientadores = lista.length;
-
-        while (lista.length != 0) {
-          var result = alasql("SELECT nome, graduacao FROM ? WHERE codigo="+lista.shift(),[professor]);
-          let it = result[Symbol.iterator]();
-          var anItem = it.next();
-
-          retorno += this.recGraduacao(anItem.value.graduacao) + ' ' + anItem.value.nome + ', ';
-        }
-
-        retorno = retorno.substring(0, retorno.length-2);
-
-        var rotulo = '<span class="descricao"><strong>' + getLabel("orient");
-        if (qtdOrientadores > 1) rotulo += getLabel("pl-composto");
-        rotulo += '</strong>: ';
-
-        return rotulo + retorno + '</span>';
-    },
-
-    recLinha: function(key) {
-        var result = alasql("SELECT nome FROM ? WHERE codigo="+key,[linha_pesquisa]);
-        let it = result[Symbol.iterator]();
-        var anItem = it.next();
-        return anItem.value.nome[getLang()];
-    },
-
-    recListaDefesas: function() {
-        var retorno = '';
-
-        var today = new Date();
-        var todayStr = today.getFullYear() + ((today.getMonth()+1 < 10) ? '0':'') + (today.getMonth()+1) + ((today.getDate() < 10) ? '0':'') + today.getDate();
-
-        var result = alasql("SELECT * FROM ? WHERE data >= '" + today.getFullYear() + "0000' ORDER BY data, hora ASC",[defesa]);
-        let it = result[Symbol.iterator]();
-        var anItem = it.next();
-
-        var flag = 0;
-        while (!anItem.done) {
-          if ( parseInt(anItem.value.data) >= parseInt(todayStr) ) {
-            if (flag == 0) {
-              retorno += '<br /><div id="viewlet-above-content-body"></div><div class="row"><div class="row-content"><div class="column col-md-12 " data-panel=""><div class="tile tile-default" id="b94"><div class="cover-collection-tile tile-content"><div class="outstanding-header tile-content" style="text-align: center;"><h2 class="outstanding-title">' + getLabel("prox_def") + '</h2><br /></div>';
-
-              flag++;
-            }
-            retorno += '<div class="collection-item"><ul class="noticias listagem-noticias-com-foto"><li><div class="conteudo">';
-            retorno += '<span class="descricao"><strong>' + getLabel("def_diss").toUpperCase() + ': ' + this.montaData(anItem.value.data) + ' - ' + this.montaHora(anItem.value.hora) + ' h</strong></span>';
-            retorno += '<h2 class="titulo"><a>' + anItem.value.titulo + '</a></h2><span class="descricao">';
-            retorno += '<strong>' + getLabel("aluno") + '</strong>: ' + this.recAluno(anItem.value.aluno) + '</span>';
-            retorno += this.recOrientadores(anItem.value.orientador);
-            retorno += '<span class="descricao"><strong>' + getLabel("linha_pesq") + '</strong>: ' + this.recLinha(anItem.value.lp) + '</span></div></li></ul></div>';
-          }
-
-          anItem = it.next();
-        }
-
-        if(flag > 0) retorno += '<div class="visualClear"><!-- --></div></div></div></div></div></div>';
-
-        return retorno;
-    },
-
     conteudo: function() {
         // calculations...
 
@@ -181,7 +96,7 @@ PHOME.prototype = {
 
         if (getLang() == 0) dContent += this.recNoticias(); else dContent += '<div id="viewlet-above-content-body"></div><br />';
         dContent += this.recAtuacao();
-        dContent += this.recListaDefesas();
+        //dContent += this.recListaDefesas();
 
         return dContent;
     }

@@ -24,12 +24,12 @@ var phist_txt_en = {
 }
 
 
-var PHIST = function() {
+var PHTRC = function() {
     this.langTxt = ( getLang() == 0 ) ? phist_txt_br : phist_txt_en;
     this.contentTitle = this.langTxt['head'];
 }
 
-PHIST.prototype = {
+PHTRC.prototype = {
     label: function() {
         return this.langTxt['label'];
     },
