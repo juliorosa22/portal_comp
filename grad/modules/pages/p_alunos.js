@@ -41,14 +41,15 @@ PALUNOS.prototype = {
 
         var retorno = '';
 
-        var result = alasql("SELECT * FROM ? ORDER BY ano",[aluno_grad]);
+        var result = alasql("SELECT * FROM ? ORDER BY ano DESC",[aluno_grad]);
         let it = result[Symbol.iterator]();
         var anItem = it.next();
         
         
         while (!anItem.done) {
+            retorno += '<tr style="text-align: left;"><td class="c1">&nbsp;</td>';
             retorno += '<td style="text-align: left;">' + anItem.value.nome + '&nbsp;</td>';
-            retorno += '<td style="text-align: left;">' + anItem.value.ano + '&nbsp;</td>';
+            retorno += '<td style="text-align: left;">' + anItem.value.ano + '&nbsp;</td></tr>';
             anItem = it.next();
         }
         
