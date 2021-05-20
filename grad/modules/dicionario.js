@@ -10,7 +10,7 @@ var pt_br = {
 //
   'menu01': "Sobre a Graduação",
   'menu01-01': "Apresentação",
-  'menu01-02': "Historico",
+  'menu01-02': "Histórico",
   'menu01-03': "Corpo Docente",
   'menu01-04': "Discentes",
   'menu01-05': "Disciplinas",

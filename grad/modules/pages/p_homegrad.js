@@ -5,7 +5,7 @@ useDataResource('tb-noticia.js');
 
 //texts in page
 var phome_txt_br = {
-  'head': "Engenharia de Computação - Graduação / IME",
+  'head': "Engenharia de Computação HomeGrad - Graduação / IME",
   'par-01': "A Seção de Ensino (Departamento Acadêmico) Engenharia de Computação no IME tem como objetivo produzir conhecimento e formar recursos humanos nos níveis de graduação e pós-graduação. A qualidade dos alunos formados é comprovada, entre outros qualificadores, por meio de suas colocações no mercado de trabalho. Os egressos do IME ocupam posição de destaque em indústrias, universidades e institutos de pesquisa.",
   'par-02': "O curso (ver histórico) foi o primeiro criado no Brasil, em 1985, e tem por objetivo formar engenheiros capacitados para a integração matemática-hardware-software, segundo moderna visão sistêmica. Concorrendo na área Engenharia de Computação, os alunos obtiveram o primeiro lugar em desempenho na prova do ENADE dos anos de 2014, 2017 e 2018. Destacando-se entre os primeiros em desempenho geral no ENADE, o curso de Engenharia de Computação do IME contribui para o desenvolvimento nacional com o sucesso da participação dos seus egressos nas empresas e indústrias e, sobretudo, atende as necessidades de engenharia do Exército Brasileiro.",
   'par-03': "A integração com a pós-graduação em Sistemas e Computação também é um diferencial importante.",
@@ -26,12 +26,12 @@ var phome_txt_en = {
   'par-07':"The Computer Engineering course at IME stands out for its pioneering spirit and excellence, being one of the main reference centers in Brazil for undergraduate teaching in this engineering."
 }
 
-var PHOME = function() {
+var PHOME_GRAD = function() {
     this.langTxt = ( getLang() == 0 ) ? phome_txt_br : phome_txt_en;
     this.contentTitle = this.langTxt['head'];
 }
 
-PHOME.prototype = {
+PHOME_GRAD.prototype = {
     label: function() {
         return "Home";
     },

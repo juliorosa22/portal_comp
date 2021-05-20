@@ -1,12 +1,16 @@
 
 //texts in page
 var phist_txt_br = {
-  'head': "História e Missão do PGSC",
-  'label': "História do PGSC",
-  'par-01': "O Instituto Militar de Engenharia (IME) é uma instituição acadêmica de nível superior pertencente ao Exército Brasileiro. O IME é herdeiro da Real Academia de Artilharia, Fortificação e Desenho, criada em 1792 e considerada a primeira escola de Engenharia das Américas e a terceira do mundo. O IME oferece cursos de graduação e pós-graduação em Engenharia, sendo considerado um centro de excelência e referência nacional e internacional no ensino da Engenharia.",
-  'par-02': "No IME, o ensino e a pesquisa em computação, em nível de pós-graduação, começou com a criação do Programa de Mestrado em Engenharia de Sistemas em 1972, com enfoque em Pesquisa Operacional e Matemática Aplicada. Um ano mais tarde, em 1973, impulsionado pela evolução tecnológica e de mercado, o curso foi levado a criar uma nova frente, dessa vez voltada especificamente para a área de Informática. Este Programa foi a semente do atual Programa de Pós-graduação em Sistemas e Computação (PGSC) da Seção de Engenharia da Computação (SE/9) do IME, que iniciou seus trabalhos em 1986.",
-  'par-03': "A missão do PGSC é preparar profissionais qualificados, com base científica e tecnológica, capazes de conduzir projetos de pesquisa e desenvolvimento de novas tecnologias na área de Engenharia de Computação. Busca-se cumprir esta missão ao contribuir para a melhoria e aperfeiçoamento do ensino, pesquisa, desenvolvimento e inovação nesta área para atender às demandas da sociedade brasileira. O PGSC aceita inscrições de candidatos civis e militares (tanto das Forças Armadas do Brasil, quanto de Nações Amigas).",
-  'par-04': "Os objetivos específicos do PPGSC do IME são:<br />&bullet; Promover a investigação científica e tecnológica na área de Engenharia de Computação.<br />&bullet; Formar recursos humanos altamente qualificados para atividades de ensino, pesquisa, desenvolvimento e inovação."
+  'head': "Histórico",
+  'label': "Histórico",
+  'par-01': "A origem da criação do curso de Engenharia de Computação remonta ao ano 1984, quando o Centro Tecnológico do Exército e pela então Diretoria de Informática (atual CITEX - Centro Integrado de Telemática do Exército) mapearam as carências computacionais do Exército e verificaram que o curso tradicional de Engenharia Eletrônica do IME já não atendia às necessidades da Força Terrestre.",
+  'par-02': "Assim, no ano de 1985, ingressaram no 3º ano os primeiros alunos do atual curso de Engenharia de Computação do IME. Na ocasião, o currículo adotado pelo IME considerou as propostas da ACM, IEEE e da Universidade Carnegie Mellon (CMU). O curso denominou-se inicialmente Eletrônica com Ênfase em Informática, em decorrência de preceito legal que determinava, às novas engenharias, terem origem nas já existentes.",
+  'par-03': "Ainda em 1985, o IME participou, juntamente com várias universidades do Rio de Janeiro (UFRJ, UFF, UFRRJ, UERJ e PUC-Rio), das reuniões promovidas pelo CREA/RJ, por meio da sua Câmara Eletricista, cujos estudos em 1987, confirmaram a necessidade do estabelecimento de nova área autônoma de engenharia denominada Engenharia de Computação.",
+  'par-04': "No ano de 1987, aqueles 5 alunos que ingressaram no então 3º ano de Eletrônica com Ênfase em Informática tornaram-se os primeiros engenheiros de computação formados no Brasil, já adotando a atual taxonomia.",
+  'par-05':"Estudos realizados em 1986 foram homologados pelo Conselho Federal de Engenharia em 1993, por meio da Resolução 380, que definiu as atribuições dos Engenheiros de Computação ou Engenheiros Eletricistas com Ênfase em Computação.",
+  'par-06':"O IME compartilha com a PUC-Rio o pioneirismo desta engenharia de concepção integradora, centrada nos conhecimentos do software, equipamentos computacionais (hardware) e matemática intensiva.",
+  'par-07':"Desde a sua criação, em 1985, até o ano de 2019, o IME formou 419 engenheiros de computação."
+
 }
 
 var phist_txt_en = {
@@ -31,7 +35,7 @@ PHIST.prototype = {
 
     conteudo: function() {
         // calculations...
-        var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.langTxt['par-01'] + '</p><p>' + this.langTxt['par-02'] + '</p><p>' + this.langTxt['par-03'] + '.</p><p>' + this.langTxt['par-04'] + '</p></div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />';
+        var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.langTxt['par-01'] + '</p><p>' + this.langTxt['par-02'] + '</p><p>' + this.langTxt['par-03'] + '.</p><p>' + this.langTxt['par-04']+ '</p><p>' + this.langTxt['par-05'] + '</p><p>' + '</p><p>' + this.langTxt['par-06'] + '</p><p>' +this.langTxt['par-07'] +'</p></div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />';
 
         return dContent;
     }
