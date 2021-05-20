@@ -5,7 +5,7 @@ useDataResource('tb-aluno-grad.js');
 
 
 //texts in page
-var pdisc_txt_br = {
+var palunos_txt_br = {
   'head': "Corpo Discente da Graduação",
   'label': "Alunos",
   'par-01': "defesa em",
@@ -13,7 +13,7 @@ var pdisc_txt_br = {
   'par-03': "Discentes regularmente matriculados"
 }
 
-var pdisc_txt_en = {
+var palunos_txt_en = {
   'head': "Faculty Students",
   'label': "Students",
   'par-01': "presents in",
@@ -37,37 +37,7 @@ PALUNOS.prototype = {
         else return str.substring(4, 6) + '/' + str.substring(6) + '/' + str.substring(0, 4);
     },
 
-    recGraduacao: function(grad) {
-        if (grad == 12) return '';
-        else {
-          var result = alasql("SELECT descricao FROM ? WHERE codigo="+grad,[graduacao]);
-          let it = result[Symbol.iterator]();
-          var anItem = it.next();
-
-          return anItem.value.descricao[getLang()];
-        }
-    },
-
-    recOrientador: function(cod) {
-        var result = alasql("SELECT nome, graduacao FROM ? WHERE codigo="+cod,[professor]);
-        let it = result[Symbol.iterator]();
-        var anItem = it.next();
-
-        return this.recGraduacao(anItem.value.graduacao) + ' ' + anItem.value.nome;
-    },
-
-    recPrazo: function(aluno, prazoInicial) {
-        var result = alasql("SELECT data FROM ? WHERE aluno="+aluno,[defesa]);
-        let it = result[Symbol.iterator]();
-        var anItem = it.next();
-
-        var retorno = this.montaData(prazoInicial);
-        if (!anItem.done) retorno = this.langTxt['par-01'] + ' ' + this.montaData(anItem.value.data);
-
-        return retorno;
-    },
-
-    listaDiscentes: function(rotulo, identificador) {
+    listaAlunos: function(rotulo, identificador) {
 
         var retorno = '';
 
@@ -98,7 +68,7 @@ PALUNOS.prototype = {
         dContent += '<table border="0" class="arquivos" summary=""><tbody>';
         //dContent += '<tr class="bg"><strong>&nbsp;</strong></td><td style="text-align: left;" width="90"><strong>' + getLabel('codigo').toUpperCase() + '</strong></td><td style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></td><td style="text-align: left;" width="350"><strong>' + getLabel('or-princ').toUpperCase() + '</strong></td><td style="text-align: left;" width="200"><strong>' + getLabel('prazo').toUpperCase() + '</strong></td></tr>';
         dContent += '<tr class="bg"><strong>&nbsp;</strong></td><td style="text-align: left;" width="90"><strong>' + getLabel('Nome').toUpperCase() + '</strong></td><td style="text-align: left;" width="320"><strong>' + 'ANO' + '</strong></td></tr>';
-        dContent += this.listaDiscentes();
+        dContent += this.listaAlunos();
         dContent += '</tbody></table></div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />'
 
         return dContent;

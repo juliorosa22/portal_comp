@@ -1,6 +1,6 @@
 
 //data file
-useDataResource('tb-areaconcentracao.js');
+//useDataResource('tb-areaconcentracao.js');
 useDataResource('tb-disciplina-grad.js');
 
 
@@ -22,7 +22,7 @@ var pdisciplinas_txt_en = {
 
 
 var PDISCIPLINAS = function() {
-  this.langTxt = ( getLang() == 0 ) ? plpes_txt_br : plpes_txt_en;
+  this.langTxt = ( getLang() == 0 ) ? pdisciplinas_txt_br : pdisciplinas_txt_en;
   this.contentTitle = this.langTxt['head'];
 };
 
