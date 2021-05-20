@@ -10,7 +10,7 @@ var menu_gov_br = [
 var menu_site = [
   { label: "menu01", submenus: [
     { label: "menu01-01", pc: "p_homegrad"},
-    { label: "menu01-02", pc: "p_histgrad"},
+    { label: "menu01-02", pc: "p_htrc"},
     { label: "menu01-03", pc: "p_profgrad"},
     { label: "menu01-04", pc: "p_alunos"},
     { label: "menu01-05", pc: "p_disciplinas"}]
