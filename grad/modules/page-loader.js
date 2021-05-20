@@ -37,12 +37,11 @@ function getCookie(cname) {
 
 function getParameterByName(name, url) {
   console.log('inside getParameterByName');
-  console.log(name);
+  
   if (!url) url = window.location.href;
-  console.log(url);
-  console.log(name);
+  
   name = name.replace(/[\[\]]/g, "\\$&");
-  console.log(name);
+  
   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
       results = regex.exec(url);
   console.log(results);
