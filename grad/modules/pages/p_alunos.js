@@ -41,11 +41,11 @@ PALUNOS.prototype = {
 
         var retorno = '';
 
-        var result = alasql("SELECT nome FROM ? ORDER BY ano DESC",[aluno_grad]);
+        var result = alasql("SELECT nome FROM ? ORDER BY ano",[aluno_grad]);
         let it = result[Symbol.iterator]();
         var anItem = it.next();
         
-        var result_year = alasql("SELECT DISTINCT ano FROM ? ORDER BY ano DESC",[aluno_grad]);
+        var result_year = alasql("SELECT DISTINCT ano FROM ? ORDER BY ano",[aluno_grad]);
         let it_year = result_year[Symbol.iterator]();
         var itemYear = it_year.next();
         while(!itemYear.done){
