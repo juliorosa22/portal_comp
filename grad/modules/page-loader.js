@@ -57,7 +57,7 @@ function useDataResource(url) {
 
 // Give the parameter a variable name
 var dynamicContent = getParameterByName('pc');
-
+console.log(dynamicContent);
 if (dynamicContent === null) dynamicContent = "p_home";
 
 var jsFile = "./modules/pages/" + dynamicContent + ".js";
