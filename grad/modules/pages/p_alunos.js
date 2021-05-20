@@ -23,7 +23,7 @@ var palunos_txt_en = {
 
 
 var PALUNOS = function() {
-    this.langTxt = ( getLang() == 0 ) ? pdisc_txt_br : pdisc_txt_en;
+    this.langTxt = ( getLang() == 0 ) ? palunos_txt_br : palunos_txt_en;
     this.contentTitle = this.langTxt['head'];
 };
 
