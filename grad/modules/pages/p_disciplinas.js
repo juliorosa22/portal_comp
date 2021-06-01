@@ -55,7 +55,7 @@ PDISCIPLINAS.prototype = {
   getSelectList: function(){
     var retorno ='';
     
-    retorno+='<div><select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select>';
+    retorno+='<div><p>Ano:</p><select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select>';
     
     return retorno;
   },
