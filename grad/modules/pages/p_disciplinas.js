@@ -56,10 +56,38 @@ PDISCIPLINAS.prototype = {
       return retorno;
   },
 
+  recDistinctAnos: function(){
+    var retorno = '';
+
+    var result = alasql('SELECT DISTINCT ano FROM ? ORDER BY ano DESC',[disciplinas_grad]);
+      let it = result[Symbol.iterator]();
+      var anItem = it.next();
+
+      while (!anItem.done) {
+        
+        retorno += '<option value="'+ anItem.value.ano +'">'+anItem.value.ano +'</option>';
+        anItem = it.next();
+      }
+
+      return retorno;
+  },
+
+  getSelectList: function(){
+    var retorno ='';
+    retorno+='<div>';
+    retorno+='<select name="ano" id="ano_filter">'+this.recDistinctAnos()+'</select>';
+
+    retorno +='<button onclick="selectAnoDisciplina()"> Selecione</button>';
+    retorno+='<script> function selectAnoDisciplina():{console.log(document.getElementById("ano_filter").value);}</script>'
+    retorno+='</div>'
+
+    return retorno;
+  },
+
   recLinhas: function() {
       var retorno = '';
 
-      var result = alasql('SELECT DISTINCT ano FROM ? ORDER BY ano',[disciplinas_grad]);
+      var result = alasql('SELECT * FROM ? ORDER BY ano',[disciplinas_grad]);
       let it = result[Symbol.iterator]();
       var anItem = it.next();
 
@@ -75,7 +103,8 @@ PDISCIPLINAS.prototype = {
   conteudo: function() {
       // calculations...
       var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.recAreas() + '</p><p>';
-      dContent += this.recLinhas();
+      dContent+=this.getSelectList();
+      // dContent += this.recLinhas();
       dContent += '</div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />';
 
       return dContent;
