@@ -56,7 +56,7 @@ PDISCIPLINAS.prototype = {
     var retorno ='';
     
     retorno+='<div><select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select>';
-    retorno+='<button onclick=()=>{console.log("Hellow");}> Selecione</button></div>';
+    retorno+='<button onclick="()=>{console.log("Hellow");}"  > Selecione</button></div>';
     return retorno;
   },
 
