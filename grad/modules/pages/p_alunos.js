@@ -64,7 +64,7 @@ PALUNOS.prototype = {
 
         dContent += '<table border="0" class="arquivos" summary=""><tbody>';
         //dContent += '<tr class="bg"><strong>&nbsp;</strong></td><td style="text-align: left;" width="90"><strong>' + getLabel('codigo').toUpperCase() + '</strong></td><td style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></td><td style="text-align: left;" width="350"><strong>' + getLabel('or-princ').toUpperCase() + '</strong></td><td style="text-align: left;" width="200"><strong>' + getLabel('prazo').toUpperCase() + '</strong></td></tr>';
-        dContent += '<tr class="bg"><strong>&nbsp;</strong></td><td style="text-align: left;" width="90"><strong>' + getLabel('nome').toUpperCase() + '</strong></td><td style="text-align: left;" width="320"><strong>' + 'ANO' + '</strong></td></tr>';
+        dContent += '<tr class="bg"><strong>&nbsp;</strong></td><td style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></td><td style="text-align: left;" width="90"><strong>' + 'ANO' + '</strong></td></tr>';
         dContent += this.listaAlunos();
         dContent += '</tbody></table></div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />'
 

@@ -59,7 +59,7 @@ PDISCIPLINAS.prototype = {
   recLinhas: function() {
       var retorno = '';
 
-      var result = alasql('SELECT * FROM ? WHERE ano=3 ORDER BY periodo',[disciplinas_grad]);
+      var result = alasql('SELECT DISTINCT ano FROM ? ORDER BY ano',[disciplinas_grad]);
       let it = result[Symbol.iterator]();
       var anItem = it.next();
 
