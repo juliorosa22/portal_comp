@@ -74,13 +74,9 @@ PDISCIPLINAS.prototype = {
 
   getSelectList: function(){
     var retorno ='';
-    retorno+='<div>';
-    retorno+='<select name="ano" id="ano_filter">'+this.recDistinctAnos()+'</select>';
-
-    retorno +='<button onclick="selectAnoDisciplina()"> Selecione</button>';
-    retorno+='<script> function selectAnoDisciplina():{console.log(document.getElementById("ano_filter").value);}</script>'
-    retorno+='</div>'
-
+    
+    retorno+='<div><select name="ano" id="ano_filter">'+this.recDistinctAnos()+'</select>';
+    retorno+='<button onclick="selectAnoDisciplina()"> Selecione</button></div>';
     return retorno;
   },
 
@@ -110,3 +106,7 @@ PDISCIPLINAS.prototype = {
       return dContent;
   }
 };
+
+function selectAnoDisciplina(){
+  console.log(document.getElementById("ano_filter").value);
+}
