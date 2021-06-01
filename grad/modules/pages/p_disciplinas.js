@@ -33,26 +33,6 @@ PDISCIPLINAS.prototype = {
 
   recAreas: function() {
       var retorno = this.langTxt['par-01'] + ' ';
-    /*
-      var result = alasql('SELECT COUNT(codigo) as num FROM ? WHERE ativa=1',[area_concentracao]);
-      let it = result[Symbol.iterator]();
-      var anItem = it.next();
-    
-      var qtdAreas = anItem.value.num;
-      if (qtdAreas == 1) retorno += this.langTxt['par-02'] + ' ';
-      else retorno += this.langTxt['par-03'] + ' ';
-
-      result = alasql('SELECT nome FROM ? WHERE ativa=1 ORDER BY nome',[area_concentracao]);
-      it = result[Symbol.iterator]();
-      anItem = it.next();
-
-      while (!anItem.done) {
-        retorno += '<span style="font-weight:bold;">' + anItem.value.nome[getLang()] + '</span>, ';
-        anItem = it.next();
-      }
-
-      retorno = retorno.substring(0, retorno.length-2) + '.';
-      */
       return retorno;
   },
 
@@ -75,8 +55,8 @@ PDISCIPLINAS.prototype = {
   getSelectList: function(){
     var retorno ='';
     
-    retorno+='<div><select name="ano" id="ano_filter">'+this.recDistinctAnos()+'</select>';
-    retorno+='<button onclick="selectAnoDisciplina()"> Selecione</button></div>';
+    retorno+='<div><select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select>';
+    retorno+='<button onclick=()=>{console.log("Hellow");}> Selecione</button></div>';
     return retorno;
   },
 
