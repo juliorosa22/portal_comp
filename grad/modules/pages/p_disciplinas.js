@@ -65,13 +65,13 @@ PDISCIPLINAS.prototype = {
     var result = alasql('SELECT * FROM ? WHERE ano = 3 ORDER BY periodo',[disciplinas_grad]);
     let it = result[Symbol.iterator]();
     var anItem = it.next();
-    retorno+='<p><strong>Período 1<strong></p><br>';
+    retorno+='<p><strong>1º Período<strong></p><br>';
     var flag=0;
     while (!anItem.done) {
-      console.log(anItem.value.nome);
+      
       if(!flag && anItem.value.periodo>1){
         flag=1;
-        retorno+='<p><strong>Período 2<strong></p><br>';
+        retorno+='<p><strong>2º Período<strong></p><br>';
       }
       retorno += '<p><strong>' + anItem.value.nome[getLang()].toUpperCase() + '</strong><br />' + anItem.value.desc + '</p>';
       anItem = it.next();
@@ -99,12 +99,12 @@ function getDisciplinasByAno(ano_selec){
   var result = alasql('SELECT * FROM ? WHERE ano = ? ORDER BY periodo',[disciplinas_grad,ano_selec]);
   let it = result[Symbol.iterator]();
   var anItem = it.next();
-  retorno+='<p><strong>Período 1<strong></p><br>';
+  retorno+='<p><strong>1º Período<strong></p><br>';
   var flag=0;
   while (!anItem.done) {
     if(!flag && anItem.value.periodo>1){
       flag=1;
-      retorno+='<p><strong>Período 2<strong></p><br>';
+      retorno+='<p><strong>2º Período<strong></p><br>';
     }
     retorno += '<p><strong>' + anItem.value.nome[getLang()].toUpperCase() + '</strong><br />' + anItem.value.desc + '</p>';
     anItem = it.next();
@@ -116,7 +116,6 @@ function getDisciplinasByAno(ano_selec){
 
 function selectAnoDisciplina(){
   let ano_selec = document.getElementById("ano_filter").value;
-  let eObj = document.getElementById("parent-fieldname-text");
   let newBody= getDisciplinasByAno(ano_selec);
-  eObj.innerHTML=newBody;
+  document.getElementById("grid_disciplinas").innerHTML=newBody;
 }
