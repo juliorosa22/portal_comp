@@ -68,6 +68,7 @@ PDISCIPLINAS.prototype = {
     retorno+='<p><strong>Período 1<strong></p><br>';
     var flag=0;
     while (!anItem.done) {
+      console.log(anItem.value.nome);
       if(!flag && anItem.value.periodo>1){
         flag=1;
         retorno+='<p><strong>Período 2<strong></p><br>';
@@ -75,7 +76,7 @@ PDISCIPLINAS.prototype = {
       retorno += '<p><strong>' + anItem.value.nome[getLang()].toUpperCase() + '</strong><br />' + anItem.value.desc + '</p>';
       anItem = it.next();
     }
-  
+    
     return retorno;
   },
 
@@ -83,8 +84,8 @@ PDISCIPLINAS.prototype = {
   conteudo: function() {
       // calculations...
       var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.recAreas() + '</p><p>';
-      dContent+=this.getSelectList();
-      // dContent += this.recLinhas();
+      dContent+=this.getSelectList()+'<div id="grid_disciplinas">';
+      dContent += this.defaultDisciGrid()+'</div>';
       dContent += '</div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />';
 
       return dContent;
