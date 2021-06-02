@@ -95,13 +95,15 @@ PDISCIPLINAS.prototype = {
 
 function getDisciplinasByAno(ano_selec){
   var retorno = '';
-
+  console.log("ano selec"+ano_selec);
   var result = alasql('SELECT * FROM ? WHERE ano = ? ORDER BY periodo',[disciplinas_grad,ano_selec]);
+  console.log(result);
   let it = result[Symbol.iterator]();
   var anItem = it.next();
   retorno+='<p><strong>1º Período<strong></p><br>';
   var flag=0;
   while (!anItem.done) {
+    
     if(!flag && anItem.value.periodo>1){
       flag=1;
       retorno+='<p><strong>2º Período<strong></p><br>';
