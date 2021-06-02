@@ -96,7 +96,7 @@ PDISCIPLINAS.prototype = {
 function getDisciplinasByAno(ano_selec){
   var retorno = '';
   console.log("ano selec"+ano_selec);
-  var result = alasql('SELECT * FROM ? WHERE ano = ? ORDER BY periodo',[disciplinas_grad,ano_selec]);
+  var result = alasql('SELECT * FROM ? WHERE ano = '+ano_selec+' ORDER BY periodo',[disciplinas_grad]);
   console.log(result);
   let it = result[Symbol.iterator]();
   var anItem = it.next();
