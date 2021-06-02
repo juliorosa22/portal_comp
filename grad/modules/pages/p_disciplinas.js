@@ -55,7 +55,7 @@ PDISCIPLINAS.prototype = {
   getSelectList: function(){
     var retorno ='';
     
-    retorno+='<div><p>Ano:<select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select></p><br><br>';
+    retorno+='<div><p>Ano:  <select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select></p><br>';
     
     return retorno;
   },
@@ -71,7 +71,7 @@ PDISCIPLINAS.prototype = {
       
       if(!flag && anItem.value.periodo>1){
         flag=1;
-        retorno+='<p><strong>2º Período<strong></p><br>';
+        retorno+='<br><p><strong>2º Período<strong></p><br>';
       }
       retorno += '<p><strong>' + anItem.value.nome[getLang()].toUpperCase() + '</strong><br />' + anItem.value.desc + '</p>';
       anItem = it.next();
