@@ -39,13 +39,13 @@ PDISCIPLINAS.prototype = {
   recDistinctAnos: function(){
     var retorno = '';
 
-    var result = alasql('SELECT DISTINCT ano FROM ? ORDER BY ano DESC',[disciplinas_grad]);
+    var result = alasql('SELECT DISTINCT ano FROM ? ORDER BY ano ',[disciplinas_grad]);
       let it = result[Symbol.iterator]();
       var anItem = it.next();
 
       while (!anItem.done) {
         
-        retorno += '<option value="'+ anItem.value.ano +'">'+anItem.value.ano +'</option>';
+        retorno += '<option value="'+ anItem.value.ano +'">'+anItem.value.ano +'º Ano'+'</option>';
         anItem = it.next();
       }
 
@@ -55,26 +55,30 @@ PDISCIPLINAS.prototype = {
   getSelectList: function(){
     var retorno ='';
     
-    retorno+='<div><p>Ano:</p><select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select>';
+    retorno+='<div><p>Ano:</p><select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select><br><br>';
     
     return retorno;
   },
-
-  recLinhas: function() {
-      var retorno = '';
-
-      var result = alasql('SELECT * FROM ? ORDER BY ano',[disciplinas_grad]);
-      let it = result[Symbol.iterator]();
-      var anItem = it.next();
-
-      while (!anItem.done) {
-        
-        retorno += '<p><strong>' + anItem.value.nome[getLang()].toUpperCase() + '</strong><br />' + anItem.value.desc + '</p>';
-        anItem = it.next();
+  defaultDisciGrid:function(){
+    var retorno = '';
+  
+    var result = alasql('SELECT * FROM ? WHERE ano = 3 ORDER BY periodo',[disciplinas_grad]);
+    let it = result[Symbol.iterator]();
+    var anItem = it.next();
+    retorno+='<p><strong>Período 1<strong></p><br>';
+    var flag=0;
+    while (!anItem.done) {
+      if(!flag && anItem.value.periodo>1){
+        flag=1;
+        retorno+='<p><strong>Período 2<strong></p><br>';
       }
-
-      return retorno;
+      retorno += '<p><strong>' + anItem.value.nome[getLang()].toUpperCase() + '</strong><br />' + anItem.value.desc + '</p>';
+      anItem = it.next();
+    }
+  
+    return retorno;
   },
+
 
   conteudo: function() {
       // calculations...
@@ -87,6 +91,31 @@ PDISCIPLINAS.prototype = {
   }
 };
 
+
+function getDisciplinasByAno(ano_selec){
+  var retorno = '';
+
+  var result = alasql('SELECT * FROM ? WHERE ano = ? ORDER BY periodo',[disciplinas_grad,ano_selec]);
+  let it = result[Symbol.iterator]();
+  var anItem = it.next();
+  retorno+='<p><strong>Período 1<strong></p><br>';
+  var flag=0;
+  while (!anItem.done) {
+    if(!flag && anItem.value.periodo>1){
+      flag=1;
+      retorno+='<p><strong>Período 2<strong></p><br>';
+    }
+    retorno += '<p><strong>' + anItem.value.nome[getLang()].toUpperCase() + '</strong><br />' + anItem.value.desc + '</p>';
+    anItem = it.next();
+  }
+
+  return retorno;
+}
+
+
 function selectAnoDisciplina(){
-  console.log(document.getElementById("ano_filter").value);
+  let ano_selec = document.getElementById("ano_filter").value;
+  let eObj = document.getElementById("parent-fieldname-text");
+  let newBody= getDisciplinasByAno(ano_selec);
+  eObj.innerHTML=newBody;
 }
