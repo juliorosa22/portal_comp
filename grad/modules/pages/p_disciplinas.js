@@ -55,7 +55,7 @@ PDISCIPLINAS.prototype = {
   getSelectList: function(){
     var retorno ='';
     
-    retorno+='<div><p>Ano:</p><select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select><br><br>';
+    retorno+='<div><p>Ano:<select name="ano" id="ano_filter" onchange="selectAnoDisciplina()">'+this.recDistinctAnos()+'</select></p><br><br>';
     
     return retorno;
   },
@@ -95,9 +95,7 @@ PDISCIPLINAS.prototype = {
 
 function getDisciplinasByAno(ano_selec){
   var retorno = '';
-  console.log("ano selec"+ano_selec);
   var result = alasql('SELECT * FROM ? WHERE ano = '+ano_selec+' ORDER BY periodo',[disciplinas_grad]);
-  console.log(result);
   let it = result[Symbol.iterator]();
   var anItem = it.next();
   retorno+='<p><strong>1º Período<strong></p><br>';
