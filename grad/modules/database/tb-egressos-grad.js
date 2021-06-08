@@ -1,4 +1,4 @@
-var aluno_grad= [
+var egressos_grad= [
     {
       nome: "AMON RHANIERY BRITO MACHADO",
       ano: "2019"

@@ -1,20 +1,29 @@
 
+//data file
+
+useDataResource('tb-egressos-grad.js');
+
+
 //texts in page
 var pegre_txt_br = {
-  'head': "Egressos do PGSC",
+  'head': "Turma de Egressos da Graduação",
   'label': "Egressos",
-  'par-01': 'De acordo com o Documento de Área de Ciência da Computação, na avaliação quadrienal será considerado como os programas acompanham os egressos. Desta forma, é importante que os programas relatem a atuação atual dos egressos. Nesse sentido, contamos com a sua ajuda - se você é egresso do curso de Mestrado em Sistemas e Computação do PGSC, por favor, preencha seus dados <a href="https://bit.ly/2zW8pQI" target="_blank">aqui</a> (nós só os usamos para gerar estatísticas sobre a ocupação dos egressos).'
+  'par-01': "defesa em",
+  'par-02': "Abaixo, encontra-se a lista de Egressos agrupados por turma.",
+  'par-03': ""
 }
 
 var pegre_txt_en = {
-  'head': "PGSC Alumni",
-  'label': "Alumni",
-  'par-01': 'You matter, and your connection to our Graduate Program, and the Military Institute of Engineering, is important to us. We want to hear from you and learn more about your research or professional endeavors, whether in the academy, corporate industry, government, or non-profit sector. If you would like to participate in the PGSC Alumni Community, please fill in the form <a href="https://bit.ly/2zW8pQI" target="_blank">here</a> (we only collect data regarding your career aspirations and experiences that will be used to improve our graduate programs).'
+  'head': "Faculty Students",
+  'label': "Students",
+  'par-01': "presents in",
+  'par-02': "Below, you can find the list of the Master's course current students.",
+  'par-03': "Current Students"
 }
 
 
 var PEGRE = function() {
-    this.langTxt = ( getLang() == 0 ) ? pegre_txt_br : pegre_txt_en;
+    this.langTxt = ( getLang() == 0 ) ? pegressos_txt_br : pegressos_txt_en;
     this.contentTitle = this.langTxt['head'];
 };
 
@@ -23,10 +32,77 @@ PEGRE.prototype = {
         return this.langTxt['label'];
     },
 
+    montaData: function(str) {
+        if (getLang() == 0) return str.substring(6) + '/' + str.substring(4, 6) + '/' + str.substring(0, 4);
+        else return str.substring(4, 6) + '/' + str.substring(6) + '/' + str.substring(0, 4);
+    },
+
+
+    getDistinctTurmaAno: function(){
+        var retorno = '';
+
+        var result = alasql('SELECT DISTINCT ano FROM ? ORDER BY ano DESC ',[aluno_grad]);
+        let it = result[Symbol.iterator]();
+        var anItem = it.next();
+        retorno += '<option value="all">'+'Listar Todos'+'</option>';
+        while (!anItem.done) {
+            retorno += '<option value="'+ anItem.value.ano +'">'+anItem.value.ano +'</option>';
+            anItem = it.next();
+      }
+
+      return retorno;
+    },
+
+    buildSelectList: function(){
+        var retorno ='';
+        retorno+='<div><p>Turma Ano:  <select name="ano" id="turma_ano_filter" onchange="buildTurmaAnoGrid()">'+this.getDistinctTurmaAno()+'</select></p>';
+        return retorno;
+    },
+
+
     conteudo: function() {
         // calculations...
-        var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.langTxt['par-01'] + '</p></div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />';
-
+        var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.langTxt['par-02'] + '</p><h2>' + this.langTxt['par-03'] + '</h2>';
+        dContent+=this.buildSelectList();
+        dContent+='<div id="grid_alunos_grad">';
+        dContent += '<table border="0" class="arquivos" summary="">'; 
+        dContent += '<thead><tr class="bg"><strong>&nbsp;</strong></td><th style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></th><th style="text-align: left;" width="90"><strong>' + 'ANO' + '</strong></th></tr></thead>';
+        dContent+='<tbody></tbody></table></div>';
+        dContent += '</div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />'
         return dContent;
     }
 };
+
+
+function getEgressosByTurma(turma_ano){
+  var retorno = '';
+  let subSql='';
+  (turma_ano === "all")?subSql="ORDER BY ano DESC,nome ASC":subSql="WHERE ano LIKE\""+turma_ano+"\" ORDER BY nome ASC"; 
+  var result = alasql("SELECT * FROM ? "+subSql,[aluno_grad]);
+  let it = result[Symbol.iterator]();
+  var anItem = it.next();
+  
+  
+  while (!anItem.done) {
+      retorno += '<tr style="text-align: left;">';
+      retorno += '<td style="text-align: left;">' + anItem.value.nome + '&nbsp;</td>';
+      retorno += '<td style="text-align: left;">' + anItem.value.ano + '&nbsp;</td></tr>';
+      anItem = it.next();
+  }
+  
+  return retorno;
+}
+
+
+function buildTurmaAnoGrid(){
+  let turma_ano = document.getElementById("turma_ano_filter").value;
+  let newBody= '<table border="0" class="arquivos" summary="">'; 
+  newBody += '<thead><tr class="bg"><strong>&nbsp;</strong></td><th style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></th><th style="text-align: left;" width="90"><strong>' + 'ANO' + '</strong></th></tr></thead>';
+  newBody+='<tbody>'+this.getEgressosByTurma(turma_ano)+'</tbody></table>';
+  document.getElementById("grid_alunos_grad").innerHTML=newBody;
+}
+
+
+  
+  
+  

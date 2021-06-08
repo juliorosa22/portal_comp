@@ -12,7 +12,7 @@ var menu_site = [
     { label: "menu01-01", pc: "p_home"},
     { label: "menu01-02", pc: "p_htrc"},
     { label: "menu01-03", pc: "p_prof"},
-    { label: "menu01-04", pc: "p_alunos"},
+    { label: "menu01-04", pc: "p_egre"},
     { label: "menu01-05", pc: "p_disciplinas"}]
    },
   { label: "menu02", submenus: [
