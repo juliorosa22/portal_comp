@@ -59,26 +59,7 @@ PALUNOS.prototype = {
         return retorno;
     },
 
-    getAlunosByTurma: function (turma_ano){
-      var retorno = '';
-      let subSql='';
-      (turma_ano === "all")?subSql="ORDER BY ano DESC,nome DESC":subSql="WHERE ano LIKE\""+turma_ano+"\" ORDER BY nome DESC"; 
-      var result = alasql("SELECT * FROM ? "+subSql,[aluno_grad]);
-      let it = result[Symbol.iterator]();
-      var anItem = it.next();
-      
-      
-      while (!anItem.done) {
-          retorno += '<tr style="text-align: left;">';
-          retorno += '<td style="text-align: left;">' + anItem.value.nome + '&nbsp;</td>';
-          retorno += '<td style="text-align: left;">' + anItem.value.ano + '&nbsp;</td></tr>';
-          anItem = it.next();
-      }
-      
-      return retorno;
-    },
 
-    
     conteudo: function() {
         // calculations...
         var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.langTxt['par-02'] + '</p><h2>' + this.langTxt['par-03'] + '</h2>';
@@ -91,6 +72,26 @@ PALUNOS.prototype = {
         return dContent;
     }
 };
+
+
+function getAlunosByTurma(turma_ano){
+  var retorno = '';
+  let subSql='';
+  (turma_ano === "all")?subSql="ORDER BY ano DESC,nome DESC":subSql="WHERE ano LIKE\""+turma_ano+"\" ORDER BY nome DESC"; 
+  var result = alasql("SELECT * FROM ? "+subSql,[aluno_grad]);
+  let it = result[Symbol.iterator]();
+  var anItem = it.next();
+  
+  
+  while (!anItem.done) {
+      retorno += '<tr style="text-align: left;">';
+      retorno += '<td style="text-align: left;">' + anItem.value.nome + '&nbsp;</td>';
+      retorno += '<td style="text-align: left;">' + anItem.value.ano + '&nbsp;</td></tr>';
+      anItem = it.next();
+  }
+  
+  return retorno;
+}
 
 
 function buildTurmaAnoGrid(){
