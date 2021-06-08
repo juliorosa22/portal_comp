@@ -77,7 +77,7 @@ PALUNOS.prototype = {
 function getAlunosByTurma(turma_ano){
   var retorno = '';
   let subSql='';
-  (turma_ano === "all")?subSql="ORDER BY ano DESC,nome DESC":subSql="WHERE ano LIKE\""+turma_ano+"\" ORDER BY nome DESC"; 
+  (turma_ano === "all")?subSql="ORDER BY ano DESC,nome ASC":subSql="WHERE ano LIKE\""+turma_ano+"\" ORDER BY nome ASC"; 
   var result = alasql("SELECT * FROM ? "+subSql,[aluno_grad]);
   let it = result[Symbol.iterator]();
   var anItem = it.next();
