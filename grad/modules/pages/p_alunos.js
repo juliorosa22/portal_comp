@@ -62,10 +62,10 @@ PALUNOS.prototype = {
         // calculations...
         var dContent = '<div id="viewlet-above-content-title"></div><h1 class="documentFirstHeading">' + this.contentTitle + '</h1><div id="viewlet-below-content-title"></div><div id="viewlet-above-content-body"></div><div id="content-core"><div id="parent-fieldname-text"><p>' + this.langTxt['par-02'] + '</p><h2>' + this.langTxt['par-03'] + '</h2>';
 
-        dContent += '<table border="0" class="arquivos" summary=""><tbody>';
+        dContent += '<table border="0" class="arquivos" summary="">';
         //dContent += '<tr class="bg"><strong>&nbsp;</strong></td><td style="text-align: left;" width="90"><strong>' + getLabel('codigo').toUpperCase() + '</strong></td><td style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></td><td style="text-align: left;" width="350"><strong>' + getLabel('or-princ').toUpperCase() + '</strong></td><td style="text-align: left;" width="200"><strong>' + getLabel('prazo').toUpperCase() + '</strong></td></tr>';
-        dContent += '<tr class="bg"><strong>&nbsp;</strong></td><td style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></td><td style="text-align: left;" width="90"><strong>' + 'ANO' + '</strong></td></tr>';
-        dContent += this.listaAlunos();
+        dContent += '<thead><tr class="bg"><strong>&nbsp;</strong></td><th style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></th><th style="text-align: left;" width="90"><strong>' + 'ANO' + '</strong></th></tr></thead>';
+        dContent += '<tbody>'+this.listaAlunos();
         dContent += '</tbody></table></div></div><div id="viewlet-below-content-body"><div class="visualClear"><!-- --></div><div class="documentActions"></div></div><br />'
 
         return dContent;
