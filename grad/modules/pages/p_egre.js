@@ -23,7 +23,7 @@ var pegre_txt_en = {
 
 
 var PEGRE = function() {
-    this.langTxt = ( getLang() == 0 ) ? pegressos_txt_br : pegressos_txt_en;
+    this.langTxt = ( getLang() == 0 ) ? pegre_txt_br : pegre_txt_en;
     this.contentTitle = this.langTxt['head'];
 };
 
@@ -41,7 +41,7 @@ PEGRE.prototype = {
     getDistinctTurmaAno: function(){
         var retorno = '';
 
-        var result = alasql('SELECT DISTINCT ano FROM ? ORDER BY ano DESC ',[aluno_grad]);
+        var result = alasql('SELECT DISTINCT ano FROM ? ORDER BY ano DESC ',[egressos_grad]);
         let it = result[Symbol.iterator]();
         var anItem = it.next();
         retorno += '<option value="all">'+'Listar Todos'+'</option>';
@@ -78,7 +78,7 @@ function getEgressosByTurma(turma_ano){
   var retorno = '';
   let subSql='';
   (turma_ano === "all")?subSql="ORDER BY ano DESC,nome ASC":subSql="WHERE ano LIKE\""+turma_ano+"\" ORDER BY nome ASC"; 
-  var result = alasql("SELECT * FROM ? "+subSql,[aluno_grad]);
+  var result = alasql("SELECT * FROM ? "+subSql,[egressos_grad]);
   let it = result[Symbol.iterator]();
   var anItem = it.next();
   
