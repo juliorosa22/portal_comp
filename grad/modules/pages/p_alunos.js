@@ -78,13 +78,6 @@ PALUNOS.prototype = {
       return retorno;
     },
 
-    buildTurmaAnoGrid: function(){
-      let turma_ano = document.getElementById("turma_ano_filter").value;
-      let newBody= '<table border="0" class="arquivos" summary="">'; 
-      newBody += '<thead><tr class="bg"><strong>&nbsp;</strong></td><th style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></th><th style="text-align: left;" width="90"><strong>' + 'ANO' + '</strong></th></tr></thead>';
-      newBody+='<tbody>'+this.getAlunosByTurma(turma_ano)+'</tbody></table>';
-      document.getElementById("grid_alunos_grad").innerHTML=newBody;
-    },
     
     conteudo: function() {
         // calculations...
@@ -99,6 +92,14 @@ PALUNOS.prototype = {
     }
 };
 
+
+function buildTurmaAnoGrid(){
+  let turma_ano = document.getElementById("turma_ano_filter").value;
+  let newBody= '<table border="0" class="arquivos" summary="">'; 
+  newBody += '<thead><tr class="bg"><strong>&nbsp;</strong></td><th style="text-align: left;" width="320"><strong>' + getLabel('nome').toUpperCase() + '</strong></th><th style="text-align: left;" width="90"><strong>' + 'ANO' + '</strong></th></tr></thead>';
+  newBody+='<tbody>'+this.getAlunosByTurma(turma_ano)+'</tbody></table>';
+  document.getElementById("grid_alunos_grad").innerHTML=newBody;
+}
 
 
   
