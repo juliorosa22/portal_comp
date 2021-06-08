@@ -47,7 +47,7 @@ PALUNOS.prototype = {
         
         
         while (!anItem.done) {
-            retorno += '<tr style="text-align: left;"><td class="c1">&nbsp;</td>';
+            retorno += '<tr style="text-align: left;">';
             retorno += '<td style="text-align: left;">' + anItem.value.nome + '&nbsp;</td>';
             retorno += '<td style="text-align: left;">' + anItem.value.ano + '&nbsp;</td></tr>';
             anItem = it.next();
