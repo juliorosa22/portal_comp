@@ -62,7 +62,7 @@ PHOME.prototype = {
     recPC: function(aLabel) {
         for(mnItem of menu_site) {
           for (mnSubItem of mnItem.submenus) {
-            if (mnSubItem.label == aLabel) return mnSubItem.pc;
+            if (mnSubItem.label == aLabel) return (mnSubItem.pc)?+homeUrl+mnSubItem.pc:mnSubItem.site;
           }
         }
         return '';
@@ -70,12 +70,12 @@ PHOME.prototype = {
 
     recAtuacao: function() {
         var retorno = '<div><div class="outstanding-header tile-content" style="text-align: center;"><h2 class="outstanding-title">' + getLabel('conh_grad') + '</h2><br /></div><div class="govbr-cards centralizar-cars"><div class="wrapper">';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu01-02") + '"><span class="front"><span class="titulo">' + getLabel("menu01-02") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu01-03") + '"><span class="front"><span class="titulo">' + getLabel("menu01-03") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu01-05") + '"><span class="front"><span class="titulo">' + getLabel("menu01-05") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu02-01") + '"><span class="front"><span class="titulo">' + getLabel("menu02-01") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu03-01") + '"><span class="front"><span class="titulo">' + getLabel("menu03-01") + '</span></span></a></div>';
-        retorno += '<div class="card"><a class="govbr-card-content" href="' + homeUrl + this.recPC("menu04-01") + '"><span class="front"><span class="titulo">' + getLabel("menu04-01") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="'+ this.recPC("menu01-02") + '"><span class="front"><span class="titulo">' + getLabel("menu01-02") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="'+ this.recPC("menu01-03") + '"><span class="front"><span class="titulo">' + getLabel("menu01-03") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="'+ this.recPC("menu01-05") + '"><span class="front"><span class="titulo">' + getLabel("menu01-05") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="'+ this.recPC("menu02-01") + '"><span class="front"><span class="titulo">' + getLabel("menu02-01") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="'+ this.recPC("menu03-01") + '"><span class="front"><span class="titulo">' + getLabel("menu03-01") + '</span></span></a></div>';
+        retorno += '<div class="card"><a class="govbr-card-content" href="'+ this.recPC("menu04-01") + '"><span class="front"><span class="titulo">' + getLabel("menu04-01") + '</span></span></a></div>';
         retorno += '</div></div></div>';
         return retorno;
     },
