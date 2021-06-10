@@ -16,7 +16,7 @@ var menu_site = [
     { label: "menu01-05", pc: "p_disciplinas"}]
    },
   { label: "menu02", submenus: [
-    { label: "menu02-01", pc: "p_pfc"}]
+    { label: "menu02-01", pc: "p_repd"}]
   },
   {
     label:"menu04",submenus:[
