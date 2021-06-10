@@ -95,7 +95,7 @@ var en_us = {
 
 //
   'menu02': "Content Central",
-  'menu02-01': "Dissertation",
+  'menu02-01': "PFCs",
 
 //
   'menu03': "Projects",
