@@ -71,7 +71,7 @@ PREPD.prototype = {
         while (!anItem.done) {
           if (tdCount == 0) retorno += '<tr>';
 
-          retorno += '<td><span><a target="_self" title="" data-tippreview-image="" href="' + homeUrl + 'p_lstd&ano=' + anItem.value.ano + '" data-tippreview-title="" class="internal-link" data-tippreview-enabled="false"><span>' + anItem.value.ano + '</span></a></span></td>';
+          retorno += '<td><span><a target="_self" title="" data-tippreview-image="" href="' + homeUrl + 'p_lpfc&ano=' + anItem.value.ano + '" data-tippreview-title="" class="internal-link" data-tippreview-enabled="false"><span>' + anItem.value.ano + '</span></a></span></td>';
 
           if (++tdCount == 15) {
             retorno += '</tr>';
