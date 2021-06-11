@@ -62,7 +62,7 @@ PDETPFC.prototype = {
 
 
     recDetalhes: function() {
-        var result = alasql("SELECT * FROM ? WHERE numero="+numero,[dissertacao]);
+        var result = alasql("SELECT * FROM ? WHERE numero="+numero,[tb_pfc]);
         let it = result[Symbol.iterator]();
         var anItem = it.next();
 
