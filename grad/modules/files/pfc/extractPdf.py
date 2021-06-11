@@ -22,7 +22,7 @@ pattr_ano = re.compile('\d\d\d\d')
 
 
 def extractTxtFromPdf(file_path,wrk_dir):
-  imgList=pdf2image.convert_from_path(wrk_dir + file_path,first_page=1,last_page=15)
+  imgList=pdf2image.convert_from_path(wrk_dir + file_path,first_page=1,last_page=20)
   txtList=[pytesseract.image_to_string(imgList[0]),pytesseract.image_to_string(imgList[1]),pytesseract.image_to_string(imgList[2])]
   for i in range(3,len(imgList)-1):
     txt = pytesseract.image_to_string(imgList[i])

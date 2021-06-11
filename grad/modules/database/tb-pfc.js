@@ -80,12 +80,15 @@ var tb_pfc = [
   },
   {
             "numero": "",
-            "titulo": "Inserir manualmente",
-            "autor": "Inserir Manualmente",
-            "orientador": "Inserir Manualmente",
-            "ano": "Inserir Manualmente",
-            "resumo_pt": "Inserir manualmente",
-            "resumo_en": "Inserir manualmente",
+            "titulo": "CONTROLE DE DRONES ATRAVES DO RECONHECIMENTO DE IMAGENS DO TERRENO ",
+            "autor": [
+                      "CARLA SZE COSENZA",
+                      "LUCAS BASTOS GERMANO"
+            ],
+            "orientador": "Orientador(es): Paulo Fernando Ferreira Rosa, Ph.D., Erick Menezes Moreira, D.Sc., Marlos de Mendonga Corr\u00e9a, M.Sc., ",
+            "ano": 2020,
+            "resumo_pt": "\n\nA industria de drones j\u00e9 possuf um valor biliondrio, e mesmo assim prev\u00e9 um grande\ncrescimento nos proximos anos. Isto \u00e9 devido ao fato que essas aeronaves est\u00e9o cada vez\nmais sendo utilizadas para realizaca\u00e9o de tarefas comerciais, como entregar compras e\nmonitorar plantacdes. Conseguir navegar \u00e9 uma tarefa essencial para estes rob\u00e9s e suas\nnovas funcionalidades esto exigindo cada vez mais dessa tecnologia. Atualmente, vem-se\nconfiando demasiadamente na utilizagao dos sistemas de geolocalizacao por sat\u00e9lite; todavia,\nseu erro de aproximacao impossibilita tarefas de localizag\u00e9o com requisitos de acuracia\nadequados e sua falta de estabilidade, em certos ambientes, demanda outras tecnologias\npara garantir a movimentagao precisa de aeronaves remotamente pilotadas. Este trabalho\nprop6e uma solucao para a navegacao atrav\u00e9s do reconhecimento de imagens do terreno.\nNele, um veiculo em movimento \u00e9 equipado com uma c\u00e9mera para capturar imagens e\num algoritmo de scene matching identifica pontos chaves dessas imagens, relacionando-as\ncom um conjunto de imagens previamente adquirido, localizando o drone no terreno. Os\nresultados foram avaliados em uma simulag\u00e9o de pequena escala de uma base petrolifera\nreal, proveniente do desafio Petrobras, que \u00e9 motivado por tarefas de interesse da industria\nde dleo e gds. Obteve-se um software, que gera a navegacao correta em ambientes fechados\ncom controle de luz e um mapa pequeno.\n\n \n\nPalavras-chave: navegacao aut6noma. visio computacional. scene matching.\n\f",
+            "resumo_en": "\n\nThe drone industry is already worth billions and studies still predict a considerate growth\nin the upcoming years. This is due to the fact that these aircrafts are increasingly being\nused to perform jobs such as delivering good and monitoring plantations. Being able to\nnavigate is an essential task for these robots, and their new functionalities are demanding\nmore from this technology. Geolocation systems have been deeply replied on, though their\nestimation error makes it impossible to perform tasks that require precision and their\nlack of stability in certain environments shows the necessity of needing other technologies\nto guarantee the precise movement of remotely piloted aircrafts. This project presents\na solution for navigation through the recognition of images of the terrain. The robot in\nmovement is equipped with a camera to capture images and a scene matching algorithm\nidentifies key points of that image, matching them with a set o previously acquired images,\nlocating the drone the in terrain. The obtained results were evaluated in a small scale\nsimulation of a real oil base, based on the Petrobras challenge, which is inspired by real\ntasks of interest of the oil and gas industry. A robust software was obtained, that generates\nthe correct navigation for close environments with light control and a small map.\n\nKeywords: autonomous navigation. computer vision. scene matching.\n\f",
             "file": "/home/julio_rosa/portal/graduacao_new/portal_comp/grad/modules/files/pfc/2020/PFC-CarlaGermano.pdf"
   },
   {
