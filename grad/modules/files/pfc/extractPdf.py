@@ -20,55 +20,23 @@ pattr_dep = re.compile('Departamento',re.IGNORECASE)
 pattr_grad = re.compile('Gradua',re.IGNORECASE)
 pattr_ano = re.compile('\d\d\d\d')
 
-def getRelevantPages(wrk_dir,pdf_path,prefix):
-    pdfFile=open(wrk_dir+pdf_path,'rb')
-    pdf=PyPDF2.PdfFileReader(pdfFile)
-    rlvPagesList =[pdf.getPage(0),pdf.getPage(1),pdf.getPage(2)]
-    stopIndex = int(pdf.getNumPages()/3)
-    for i in range(3,stopIndex):
-        tmpPage = pdf.getPage(i)
-        txt2Search = tmpPage.extractText()
-        if pattr_res.search(txt2Search)!= None:
-            rlvPagesList.append(pdf.getPage(i))
-            rlvPagesList.append(pdf.getPage(i+1))
-            break 
-    newPdfFile = open(wrk_dir+prefix+pdf_path,'wb')
-    pdfWriter = PyPDF2.PdfFileWriter()
-    for pg in rlvPagesList:
-        pdfWriter.addPage(pg)
-    pdfWriter.write(newPdfFile)
-    pdfFile.close()
-    newPdfFile.close()
+
+def extractTxtFromPdf(file_path,wrk_dir):
+  imgList=pdf2image.convert_from_path(wrk_dir + file_path,first_page=1,last_page=15)
+  txtList=[pytesseract.image_to_string(imgList[0]),pytesseract.image_to_string(imgList[1]),pytesseract.image_to_string(imgList[2])]
+  for i in range(3,len(imgList)-1):
+    txt = pytesseract.image_to_string(imgList[i])
+    if pattr_res.search(txt)!=None:
+      txtList.append(txt)
+      txtList.append(pytesseract.image_to_string(imgList[i+1]))
+      break
+  if len(txtList) < 5:
+    txtList.append('Inserir Manualmente')
+    txtList.append('Inserir Manualmente')
+  return txtList
 
 
-def delete_ppms(wrk_dir):
-  for file in os.listdir(wrk_dir):
-    if '.ppm' in file or '.DS_Store' in file:
-      try:
-          os.remove(wrk_dir + file)
-      except FileNotFoundError:
-          pass
-
-def pdf_extract(file_path, wrk_dir,i):
-  print("extracting from file:", file_path)
-  images = pdf2image.convert_from_path(wrk_dir + file_path, output_folder=wrk_dir)
-  j = 0
-  for file in sorted (os.listdir(wrk_dir)):
-      if '.ppm' in file and 'image' not in file:
-        os.rename(wrk_dir + file, wrk_dir + 'image' + str(i) + '-' + str(j) + '.ppm')
-        j += 1
-  j = 0
-  files = [f for f in os.listdir(wrk_dir) if '.ppm' in f]
-  list_str=[]
-  for file in sorted(files, key=lambda x: int(x[x.index('-') + 1: x.index('.')])):
-      temp = pytesseract.image_to_string(Image.open(wrk_dir + file))
-      list_str.append(temp)  
-  delete_ppms(wrk_dir)
-  
-  return list_str
-
-
-def getPfcContents(lst_str):
+def getRelevantInfos(lst_str):
   
   strAuthors=lst_str[0]
   ## Pega os nomes dos Discente, titulo e ano
@@ -123,27 +91,24 @@ def getPfcContents(lst_str):
         start_index=pattr_orient.search(orientInfo2).start()
         end_index=pattr_rj.search(orientInfo2).start()
         strOrient=orientInfo2[start_index:end_index]
-  
-  
-
   list_str =strOrient.split('\n')
-  
   orient=''
   for s in list_str:
     if s!='' and len(s)>5:
       orient+=s+', '
-
   resInfo=lst_str[3]
-  start_index = pattr_res.search(resInfo).end()
-  resStr=resInfo[start_index:]
   absInfo=lst_str[4]
-  start_index = pattr_abs.search(absInfo).end()
-  absStr=absInfo[start_index:]
-  data={'numero':'','titulo':title_str,'autor':auths,'orientador':orient,'ano':int(ano),'resumo_pt':resStr,'resumo_en':absStr}     
+  
+  if pattr_res.search(resInfo)!=None:
+    start_index = pattr_res.search(resInfo).end()
+    resInfo=resInfo[start_index:]
+    start_index = pattr_abs.search(absInfo).end()
+    absInfo=absInfo[start_index:]
+  data={'numero':'','titulo':title_str,'autor':auths,'orientador':orient,'ano':int(ano),'resumo_pt':resInfo,'resumo_en':absInfo}     
   return data
 
-
-def extractPfcFromDir(wrk_dir,json_data):
+    
+def getPFCData(wrk_dir,json_data):
   pdf_files=[]
   for f in os.listdir(wrk_dir):
     full_name = os.path.join(wrk_dir, f) 
@@ -152,32 +117,25 @@ def extractPfcFromDir(wrk_dir,json_data):
       filename, ext = os.path.splitext(name)
       if ext == '.pdf':
         pdf_files.append(name)
-  pref='temp_'
+  
   for pdf in pdf_files:
-    getRelevantPages(wrk_dir,pdf,pref)  
-    strContent = pdf_extract(pref+pdf,wrk_dir,0)
+    print(f'Pdf File: {pdf}')
+    strContent = extractTxtFromPdf(pdf,wrk_dir)
     data=[]
-    try:
-      os.remove(wrk_dir+pref+pdf)
-    except FileNotFoundError:
-      pass
-    if strContent[0]!='\x0c':
-      data = getPfcContents(strContent)
-      data['file']=wrk_dir+pdf
-    else:
-      data={'numero':'','titulo':'Inserir manualmente','autor':'Inserir Manualmente','orientador':'Inserir Manualmente','ano':'Inserir Manualmente','resumo_pt':'Inserir manualmente','resumo_en':'Inserir manualmente','file':wrk_dir+pdf}
-      
+    data = getRelevantInfos(strContent)
+    data['file']=wrk_dir+pdf  
     json_data.append(data)
-      
-    
+
+
+
 
 json_data=[]
 
 for d in os.listdir(base_dir):
   if os.path.isdir(d):
     ano_dir = os.path.basename(d)
-    print(ano_dir)
-    extractPfcFromDir(base_dir+'/'+ano_dir+'/',json_data)
+    print(f'Ano: {ano_dir}')
+    getPFCData(base_dir+'/'+ano_dir+'/',json_data)
 json_obj=json.dumps(json_data,indent=10)
 with open(tb_dir+"tb_aux_pfc.json","w") as outfile:
   outfile.write(json_obj)
