@@ -76,7 +76,7 @@ PDETPFC.prototype = {
           abs01 = anItem.value.resumo_en; abs02 = anItem.value.resumo_pt;
         }
 
-        var tempData = anItem.value.ano + "" + anItem.value.dia.substring(3) + anItem.value.dia.substring(0, 2);
+
 
         var retorno = '<p><strong>' + this.langTxt['par-01'].toUpperCase() + '</strong><br />' + anItem.value.titulo + '</p>';
         retorno += '<p><strong>' + this.langTxt['par-02'].toUpperCase() + '</strong><br />' + anItem.value.autor + '<br />' + anItem.value.orientador + '</p>';
