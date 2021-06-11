@@ -108,7 +108,7 @@ def getRelevantInfos(lst_str):
   return data
 
     
-def getPFCData(wrk_dir,json_data):
+def getPFCData(wrk_dir,json_data,count):
   pdf_files=[]
   for f in os.listdir(wrk_dir):
     full_name = os.path.join(wrk_dir, f) 
@@ -120,22 +120,26 @@ def getPFCData(wrk_dir,json_data):
   
   for pdf in pdf_files:
     print(f'Pdf File: {pdf}')
+    count+=1
     strContent = extractTxtFromPdf(pdf,wrk_dir)
     data=[]
     data = getRelevantInfos(strContent)
     data['file']=wrk_dir+pdf  
+    data['numero']=count
     json_data.append(data)
+    
+  return count
 
 
 
 
 json_data=[]
-
+count=0
 for d in os.listdir(base_dir):
   if os.path.isdir(d):
     ano_dir = os.path.basename(d)
     print(f'Ano: {ano_dir}')
-    getPFCData(base_dir+'/'+ano_dir+'/',json_data)
+    count=getPFCData(base_dir+'/'+ano_dir+'/',json_data,count)
 json_obj=json.dumps(json_data,indent=10)
 with open(tb_dir+"tb_aux_pfc.json","w") as outfile:
   outfile.write(json_obj)

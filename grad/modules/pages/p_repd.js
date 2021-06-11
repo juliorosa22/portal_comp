@@ -14,8 +14,8 @@ var prepd_txt_br = {
 }
 
 var prepd_txt_en = {
-  'head': "Repository of Graduation End of Course Projects",
-  'label': "PFCs",
+  'head': "Repository of Graduation Final Project ",
+  'label': "Final Projects",
   'par-01': "The template (LaTeX format) for writing the PFC report (used in VE, VC and VF presentations) can be found",
   'par-02': "here",
   'par-03': "Currently, we do not have a digital file for all presented dissertations -- mainly from the first years of the Program. If your dissertation file is not listed here, please contact the Program Coordination.",
@@ -34,7 +34,7 @@ PREPD.prototype = {
     },
 
     recNumMsc: function() {
-        var result = alasql("SELECT MAX(numero) as qtd FROM ?",[dissertacao]);
+        var result = alasql("SELECT MAX(numero) as qtd FROM ?",[tb_pfc]);
         let it = result[Symbol.iterator]();
         var anItem = it.next();
 
