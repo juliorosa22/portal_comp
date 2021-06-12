@@ -1,6 +1,6 @@
 [
           {
-                    "numero": "",
+                    "numero": 1,
                     "titulo": "DESENVOLVIMENTO DE APLICATIVO EM ANDROID PARA SNIFFER DE REDE ",
                     "autor": [
                               "1\u00b0 Ten TIAGO OLIVEIRA SALDANHA",
@@ -13,7 +13,7 @@
                     "file": "/home/julio_rosa/portal/graduacao_new/portal_comp/grad/modules/files/pfc/2016/2016-Saldanha.pdf"
           },
           {
-                    "numero": "",
+                    "numero": 2,
                     "titulo": "DESENVOLVIMENTO DE ALGORITMOS DE SEGMENTAGAO DE IMAGENS EM AMBIENTE ANDROID ",
                     "autor": [
                               "Cap BRUNO AVELINO DE ARAUJO OLIVEIRA",
@@ -26,7 +26,7 @@
                     "file": "/home/julio_rosa/portal/graduacao_new/portal_comp/grad/modules/files/pfc/2017/PFC - Avelino.pdf"
           },
           {
-                    "numero": "",
+                    "numero": 3,
                     "titulo": "INSTALACAO E CONFIGURACAO DE SERVICOS WEB PARA DISPONIBILIZACAO DE DADOS ESPACIAIS EM OPERACOES MILITARES ",
                     "autor": [
                               "Ten ARTHUR FERNANDES ARAUJO",
@@ -39,7 +39,7 @@
                     "file": "/home/julio_rosa/portal/graduacao_new/portal_comp/grad/modules/files/pfc/2015/2015-Araujo.pdf"
           },
           {
-                    "numero": "",
+                    "numero": 4,
                     "titulo": "IMPLEMENTAGAO DE ESTRUTURAS DE DADOS AVANGADAS PARA PROBLEMAS EM GRAFOS DINAMICOS ",
                     "autor": [
                               "BRUNA ALVES RAMALHO",
@@ -52,7 +52,7 @@
                     "file": "/home/julio_rosa/portal/graduacao_new/portal_comp/grad/modules/files/pfc/2019/PFC - Bruna.pdf"
           },
           {
-                    "numero": "",
+                    "numero": 5,
                     "titulo": "LEONARDO LINHARES MUNIZ RIBEIRO DESENVOLVIMENTO DE UMA BIBLIOTECA DE PROVENIENCIA DE DADOS PARA EXPERIMENTOS DE APRENDIZADO DE MAQUINA EM C++ ",
                     "autor": [
                               "1 Ten LUCAS BRAIDA NAZARETH",
@@ -65,7 +65,7 @@
                     "file": "/home/julio_rosa/portal/graduacao_new/portal_comp/grad/modules/files/pfc/2018/PFC - Braida.pdf"
           },
           {
-                    "numero": "",
+                    "numero": 6,
                     "titulo": "LUDOCUS - FERRAMENTA DE GAMIFICACAO PARA QUALQUER EXPERIENCIA ",
                     "autor": [
                               "BRUNELLI GABRIEL CUPELLO",
@@ -78,7 +78,7 @@
                     "file": "/home/julio_rosa/portal/graduacao_new/portal_comp/grad/modules/files/pfc/2020/PFC_Brunelli_Datolla.pdf"
           },
           {
-                    "numero": "",
+                    "numero": 7,
                     "titulo": "CONTROLE DE DRONES ATRAVES DO RECONHECIMENTO DE IMAGENS DO TERRENO ",
                     "autor": [
                               "CARLA SZE COSENZA",
@@ -91,7 +91,7 @@
                     "file": "/home/julio_rosa/portal/graduacao_new/portal_comp/grad/modules/files/pfc/2020/PFC-CarlaGermano.pdf"
           },
           {
-                    "numero": "",
+                    "numero": 8,
                     "titulo": "INTERACAO POR HAND-TRACKING EM AMBIENTE DE REALIDADE VIRTUAL ",
                     "autor": [
                               "MATEUS CANDIDO LIMA DE CASTRO",

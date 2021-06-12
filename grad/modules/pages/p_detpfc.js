@@ -82,7 +82,7 @@ PDETPFC.prototype = {
         retorno += '<p><strong>' + this.langTxt['par-02'].toUpperCase() + '</strong><br />' + anItem.value.autor + '<br />' + anItem.value.orientador + '</p>';
         retorno += '<p><strong>' + locale01['par-03'].toUpperCase() + '</strong><br />' + abs01 + '</p>';
         retorno += '<p><strong>' + locale02['par-03'].toUpperCase() + '</strong><br />' + abs02 + '</p>';
-        retorno += this.linkDownload(anItem.value.ano, anItem.value.arquivo);
+        retorno += this.linkDownload(anItem.value.ano, anItem.value.file);
         retorno += '<br />';
 
         return retorno;

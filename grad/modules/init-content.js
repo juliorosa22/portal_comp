@@ -27,8 +27,11 @@ var menu_site = [
 
 
 var menu_projetos_ref =[
-  { label: "menu03-01",site:"http://www.defesacibernetica.ime.eb.br/index.html"},
-  { label: "menu03-02",site:"http://www.dct.eb.mil.br/"}
+  { label: "menu03-01",site:"https://www.gov.br/defesa/pt-br/"},
+  { label: "menu03-02",site:"http://www.eb.mil.br/"},
+  { label: "menu03-03",site:"http://www.dct.eb.mil.br/"},
+  { label: "menu03-05",site:"http://www.defesacibernetica.ime.eb.br/index.html"},
+  { label: "menu03-04",site:"http://www.ime.eb.mil.br/"}
 ];
 
 var menu_site_capes = [
@@ -113,7 +116,7 @@ Contexto.prototype = {
 
       if (dynamicContent.toUpperCase() == 'P_HOME') retorno += '';
       else {
-        if ( (dynamicContent.toUpperCase() == 'P_LSTD') || (dynamicContent.toUpperCase() == 'P_DETD') || (dynamicContent.toUpperCase() == 'P_PRCD') ) retorno += this.pagina.specialBreadcrumbs();
+        if ( (dynamicContent.toUpperCase() == 'P_LPFC') || (dynamicContent.toUpperCase() == 'P_DETPFC') || (dynamicContent.toUpperCase() == 'P_PRCD') ) retorno += this.pagina.specialBreadcrumbs();
         else {
           retorno += '<nav id="breadcrumbs" aria-label="Histórico de navegação (Breadcrumbs)"><div class="content"><span class="sr-only">Você está aqui:</span>';
           retorno += '<span class="home"><a href="' + siteUrl + '"><span class="fas fa-home" aria-hidden="true"></span><span class="sr-only">Página Inicial</span></a></span>';
@@ -144,7 +147,7 @@ Contexto.prototype = {
     referenciaAntigo: function() {
       var retorno = '';
       if (getLang() == 0) {
-        retorno = '<div class="tile tile-default" id="de377639-e521-47f7-845a-49f7b1dc77aa"><div class="cover-richtext-tile tile-content"><p class="callout" style="text-align: left;" data-mce-style="text-align: left;"><strong>Nosso portal está em migração. Não encontrou o que procurava? Acesse o portal antigo: <span style="color: rgb(0, 0, 255);"><a class="external-link" href="http://www.comp.ime.eb.br/old-pos-v02" target="_blank"><span style="color: rgb(0, 0, 255);">PGSC - Antigo</span></a></span><br /></strong></p></div></div>';
+        retorno = '<div class="tile tile-default" id="de377639-e521-47f7-845a-49f7b1dc77aa"><div class="cover-richtext-tile tile-content"><p class="callout" style="text-align: left;" data-mce-style="text-align: left;"><strong>Nosso portal está em migração. Não encontrou o que procurava? Acesse o portal antigo: <span style="color: rgb(0, 0, 255);"><a class="external-link" href="http://www.comp.ime.eb.br/graduacao/" target="_blank"><span style="color: rgb(0, 0, 255);">Graduação- Antigo</span></a></span><br /></strong></p></div></div>';
       }
       return retorno;
     },

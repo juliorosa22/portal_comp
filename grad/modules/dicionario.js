@@ -20,9 +20,12 @@ var pt_br = {
   'menu02-01': "PFC",
 
 //
-  'menu03': "Projetos",
-  'menu03-01':"Defesa Cibernética",
-  'menu03-02':"Lab Ds",
+  'menu03': "Conheça",
+  'menu03-01':"Ministério da Defesa",
+  'menu03-02':"Exército Brasileiro",
+  'menu03-03':"DCT",
+  'menu03-04':"Defesa Cibernética",
+  'menu03-05':"IME",
 //
   'menu04': "Canais de Atendimento",
   'menu04-01': "Fale Conosco",
