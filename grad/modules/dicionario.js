@@ -1,6 +1,6 @@
 ﻿
 var pt_br = {
-  'site-name': " (Copia do Site Projeto Integrador CFrm) Graduação em Engenharia de Computação - IME",
+  'site-name': "Graduação em Engenharia de Computação - IME",
 //
   'menugovbr01': "Órgãos do Governo",
   'menugovbr02': "Acesso à Informação",
