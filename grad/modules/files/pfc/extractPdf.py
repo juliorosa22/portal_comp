@@ -124,7 +124,7 @@ def getPFCData(wrk_dir,json_data,count):
     strContent = extractTxtFromPdf(pdf,wrk_dir)
     data=[]
     data = getRelevantInfos(strContent)
-    data['file']=wrk_dir+pdf  
+    data['file']=pdf  
     data['numero']=count
     json_data.append(data)
     
