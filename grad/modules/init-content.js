@@ -72,7 +72,7 @@ Contexto.prototype = {
     },
 
     siteName: function() {
-      return '<a href='+homeUrl+'title="Graduação">' + getLabel('site-name') + '</a>';
+      return '<a href="" title="Graduação">' + getLabel('site-name') + '</a>';
     },
 
     montaMenu: function() {

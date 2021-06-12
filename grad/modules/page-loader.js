@@ -7,7 +7,7 @@ var formDir = 'modules/files/formularios/';
 var imgDir = 'modules/images/';
 
 var emPgsc = "coord_pg_se9@ime.eb.br";
-var tfPgsc = "(21) 2546-7099";
+var tfPgsc = "(21) 2546-7096";
 
 var site_sd1 = "http://www.ime.eb.mil.br/pt/informacoes-gerais.html";
 
