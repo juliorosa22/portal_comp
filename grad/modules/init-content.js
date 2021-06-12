@@ -30,8 +30,8 @@ var menu_projetos_ref =[
   { label: "menu03-01",site:"https://www.gov.br/defesa/pt-br/"},
   { label: "menu03-02",site:"http://www.eb.mil.br/"},
   { label: "menu03-03",site:"http://www.dct.eb.mil.br/"},
-  { label: "menu03-05",site:"http://www.defesacibernetica.ime.eb.br/index.html"},
-  { label: "menu03-04",site:"http://www.ime.eb.mil.br/"}
+  { label: "menu03-04",site:"http://www.defesacibernetica.ime.eb.br/index.html"},
+  { label: "menu03-05",site:"http://www.ime.eb.mil.br/"}
 ];
 
 var menu_site_capes = [
