@@ -101,9 +101,12 @@ var en_us = {
   'menu02-01': "PFCs",
 
 //
-  'menu03': "Projects",
-  'menu03-01':"Defesa Cibernética",
-  'menu03-02':"Lab Ds",
+'menu03': "About",
+'menu03-01':"Defense Ministry",
+'menu03-02':"Brazilian Army",
+'menu03-03':"DCT",
+'menu03-04':"Cyber Defense",
+'menu03-05':"IME",
 
 //
   'menu04': "Communication Channels",
@@ -136,7 +139,7 @@ var en_us = {
   'pgsc': "Graduate Program in Systems and Computing",
   'cmdt-dir': "Commander and Chancellor",
   'ch-depq': "Teaching and Research Division Chief",
-  'conh_grad':"Conheça a Engenharia de Computação",
+  'conh_grad':"Meet Computer Engineering",
   'ch-sd1': "Graduate Courses Subdivision Chief",
   'ch-se9': "Computer Engineering Department Chief",
   'coord': "Program Coordinator",
