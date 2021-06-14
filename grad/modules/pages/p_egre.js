@@ -17,8 +17,8 @@ var pegre_txt_en = {
   'head': "Faculty Students",
   'label': "Students",
   'par-01': "presents in",
-  'par-02': "Below, you can find the list of the Master's course current students.",
-  'par-03': "Current Students"
+  'par-02': "Below is the list of Egresses grouped by class.",
+  'par-03': ""
 }
 
 

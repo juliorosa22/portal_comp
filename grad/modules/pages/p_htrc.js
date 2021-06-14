@@ -16,7 +16,7 @@ var phist_txt_br = {
 
 var phist_txt_en = {
   'head': "History and Mission",
-  'label': "About PGSC",
+  'label': "History",
   'par-01': "The Military Institute of Engineering is the Brazilian Army engineering Institute. It descends from the Royal Academy of Artillery, Fortification and Design, created in 1972, considered to be the first Engineering School of the Americas and the third of the world. IME is small but prizes excellence, imparting knowledge in engineering through comprehensive undergraduate and graduage programs, research, dissemination through scholarly publications, and service to the community, the Army, and the nation.",
   'par-02': "The Graduate Program in Computer Engineering at IME emerged in 1972, focusing in Operational Research and Applied Mathematics. An year later, it stated focusing in Informatics. Years of collaboration between these three options and the increasing importance of cross-discipline expertise naturally led to the idea of merging these entities into a single Systems and Computing Program, in 1986.",
   'par-03': "The mission of the Systems and Computing Program is to expand knowledge and benefit society through research integrated with education. We investigate the most challenging, fundamental problems in science and technology in an interdisciplinary atmosphere, while educating students to become creative members of society. The Program admits both civilian and military applicants.",

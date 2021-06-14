@@ -14,10 +14,10 @@ var pdisciplinas_txt_br = {
 }
 
 var pdisciplinas_txt_en = {
-  'head': "Rearch and Structure",
-  'label': "Research",
-  'par-01': "The Graduate Program in Systems and Computing has",
-  'par-02': "the following Research Major:",
+  'head': "Graduation Curriculum",
+  'label': "Curriculum",
+  'par-01': "Subjects are organized according to the year in which they are offered and period.",
+  'par-02': "",
 }
 
 
