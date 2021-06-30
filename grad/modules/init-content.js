@@ -81,7 +81,7 @@ Contexto.prototype = {
       for(mnItem of menu_site) {
         retorno += '<li class="dropdown-submenu"><a class="plain">' + getLabel(mnItem.label) + '</a><ul class="submenu">';
         for (mnSubItem of mnItem.submenus) {
-          var aux='';
+          
          
           retorno += '<li><a href=\"' + homeUrl + mnSubItem.pc + '\" class="state-published">' + getLabel(mnSubItem.label) + '</a></li>';
           
@@ -89,7 +89,7 @@ Contexto.prototype = {
         retorno += '</ul></li>';
         
       }
-      console.log(retorno);
+      
       retorno += '<li class="dropdown-submenu"><a class="plain">' + getLabel("menu03") + '</a><ul class="submenu">';
       for (anItem of menu_projetos_ref) {
         retorno += '<li class="plain"><a href="' + anItem.site + '" target="_blank" class="state-published">' + getLabel(anItem.label) + '</a></li>';
