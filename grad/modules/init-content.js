@@ -82,6 +82,7 @@ Contexto.prototype = {
         retorno += '<li class="dropdown-submenu"><a class="plain">' + getLabel(mnItem.label) + '</a><ul class="submenu">';
         for (mnSubItem of mnItem.submenus) {
           retorno += '<li><a href="' + homeUrl + mnSubItem.pc + '" class="state-published">' + getLabel(mnSubItem.label) + '</a></li>';
+          console.log(mnSubItem.pc)
         }
         retorno += '</ul></li>';
       }
