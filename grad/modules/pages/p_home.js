@@ -62,7 +62,12 @@ PHOME.prototype = {
     recPC: function(aLabel) {
         for(mnItem of menu_site) {
           for (mnSubItem of mnItem.submenus) {
-            if (mnSubItem.label == aLabel) return (mnSubItem.pc)?+homeUrl+mnSubItem.pc:mnSubItem.site;
+            if (mnSubItem.label == aLabel){
+              if (mnSubItem.pc) return homeUrl+mnSubItem.pc
+              else return mnSubItem.site
+            } 
+            
+            
           }
         }
         return '';
