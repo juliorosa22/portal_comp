@@ -1,7 +1,7 @@
 
 
 var siteUrl = "./";
-var homeUrl = siteUrl + "?pc=";
+var homeUrl = siteUrl + String('?pc=');
 
 var formDir = 'modules/files/formularios/';
 var imgDir = 'modules/images/';
